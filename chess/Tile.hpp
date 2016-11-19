@@ -28,6 +28,8 @@ public:
     Tile(int x, int y, int scale, TileColor color);
     ~Tile();
     
+    void update();
+    
     int getX();
     int getY();
     TileColor getColor();

@@ -16,6 +16,8 @@
 		254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F046F1DE030E4002AFD3C /* ChessBoard.cpp */; };
 		254F04741DE0AB9D002AFD3C /* ChessGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04721DE0AB9D002AFD3C /* ChessGame.cpp */; };
 		254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04751DE0B4CF002AFD3C /* Tile.cpp */; };
+		254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F047B1DE0CD3E002AFD3C /* Piece.cpp */; };
+		254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F047F1DE0CF54002AFD3C /* Pawn.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		254F04731DE0AB9D002AFD3C /* ChessGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChessGame.hpp; sourceTree = "<group>"; };
 		254F04751DE0B4CF002AFD3C /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
 		254F04761DE0B4CF002AFD3C /* Tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		254F047B1DE0CD3E002AFD3C /* Piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
+		254F047C1DE0CD3E002AFD3C /* Piece.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Piece.hpp; sourceTree = "<group>"; };
+		254F047F1DE0CF54002AFD3C /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
+		254F04801DE0CF54002AFD3C /* Pawn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pawn.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
 				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
 				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
+				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
+				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
+				254F047E1DE0CF25002AFD3C /* Pieces */,
 				254F04611DE02CD1002AFD3C /* Resources */,
 				254F045A1DE02CD1002AFD3C /* Supporting Files */,
 			);
@@ -98,6 +107,15 @@
 				254F04681DE02CD1002AFD3C /* icon.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		254F047E1DE0CF25002AFD3C /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				254F04801DE0CF54002AFD3C /* Pawn.hpp */,
+				254F047F1DE0CF54002AFD3C /* Pawn.cpp */,
+			);
+			name = Pieces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */,
 				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
+				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
 				254F04741DE0AB9D002AFD3C /* ChessGame.cpp in Sources */,
 				254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */,
 				254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */,

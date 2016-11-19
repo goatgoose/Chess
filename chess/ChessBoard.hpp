@@ -22,7 +22,9 @@ public:
     void setScale(int scale);
     int getOffset();
 private:
-    void createTiles(bool alreadyExists);
+    void update();
+    
+    void createTiles();
     int scale;
 };
 

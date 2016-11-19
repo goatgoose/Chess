@@ -9,17 +9,13 @@
 #include "ChessBoard.hpp"
 
 ChessBoard::ChessBoard() {
-    createTiles(false);
+    createTiles();
 }
 
-void ChessBoard::createTiles(bool alreadyExists = true) {
+void ChessBoard::createTiles() {
     bool tileIsWhite = true;
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
-            if (alreadyExists) {
-                delete tiles[x][y];
-            }
-            
             if (tileIsWhite) {
                 tiles[x][y] = new Tile(x, y, getOffset(), WHITE);
             } else {
@@ -28,6 +24,14 @@ void ChessBoard::createTiles(bool alreadyExists = true) {
             tileIsWhite = !tileIsWhite;
         }
         tileIsWhite = !tileIsWhite;
+    }
+}
+
+void ChessBoard::update() {
+    for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++) {
+            tiles[x][y]->update();
+        }
     }
 }
 

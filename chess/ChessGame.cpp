@@ -38,11 +38,7 @@ void ChessGame::startGame() {
                 // http://stackoverflow.com/questions/27785940/shapes-proportionally-resize-with-window-in-sfml-2-x
                 window->setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
                 
-                if (event.size.width > event.size.height) {
-                    board.setScale(event.size.height);
-                } else {
-                    board.setScale(event.size.width);
-                }
+                board.setScale(event.size.height);
             }
             
         }
