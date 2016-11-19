@@ -28,7 +28,7 @@ public:
     Tile(int x, int y, int scale, TileColor color);
     ~Tile();
     
-    void update();
+    void setScale(int scale);
     
     int getX();
     int getY();
@@ -36,6 +36,8 @@ public:
     RectangleShape* getRect();
     
 private:
+    void update();
+    
     int x;
     int y;
     int scale;

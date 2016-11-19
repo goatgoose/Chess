@@ -11,13 +11,16 @@
 
 #include <iostream>
 #include <Tile.hpp>
+#include <Piece.hpp>
+#include <Pawn.hpp>
 
 using namespace std;
 
 class ChessBoard {
 public:
-    ChessBoard();
+    ChessBoard(int scale);
     Tile* tiles[8][8];
+    Piece* pieces[8][8];
     
     void setScale(int scale);
     int getOffset();
@@ -25,6 +28,7 @@ private:
     void update();
     
     void createTiles();
+    void createPieces();
     int scale;
 };
 

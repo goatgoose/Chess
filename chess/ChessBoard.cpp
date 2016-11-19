@@ -8,8 +8,11 @@
 
 #include "ChessBoard.hpp"
 
-ChessBoard::ChessBoard() {
+ChessBoard::ChessBoard(int scale) {
+    this->scale = scale;
+    
     createTiles();
+    createPieces();
 }
 
 void ChessBoard::createTiles() {
@@ -27,17 +30,33 @@ void ChessBoard::createTiles() {
     }
 }
 
+void ChessBoard::createPieces() {
+    for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++) {
+            pieces[x][y] = nullptr;
+        }
+    }
+    
+    for (int x = 0; x < 8; x++) {
+        pieces[x][1] = new Pawn(x, 1, getOffset(), "black");
+        pieces[x][6] = new Pawn(x, 6, getOffset(), "white");
+    }
+}
+
 void ChessBoard::update() {
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
-            tiles[x][y]->update();
+            tiles[x][y]->setScale(getOffset());
+            if (pieces[x][y] != nullptr) {
+                pieces[x][y]->setScale(getOffset());
+            }
         }
     }
 }
 
 void ChessBoard::setScale(int scale) {
     this->scale = scale;
-    createTiles();
+    update();
 }
 
 int ChessBoard::getOffset() {

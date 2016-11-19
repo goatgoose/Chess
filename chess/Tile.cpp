@@ -18,17 +18,22 @@ Tile::Tile(int x, int y, int scale, TileColor color) {
     this->color = color;
     
     rect = new RectangleShape();
+    if (color == WHITE) {
+        rect->setFillColor(Color(246, 246, 246));
+    } else {
+        rect->setFillColor(Color(75, 75, 75));
+    }
+    update();
+}
+
+void Tile::setScale(int scale) {
+    this->scale = scale;
     update();
 }
 
 void Tile::update() {
     rect->setSize(Vector2f(scale, scale));
     rect->setPosition(Vector2f(scale * x, scale * y));
-    if (color == WHITE) {
-        rect->setFillColor(Color(246, 246, 246));
-    } else {
-        rect->setFillColor(Color(75, 75, 75));
-    }
 }
 
 int Tile::getX() {

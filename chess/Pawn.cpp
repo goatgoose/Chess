@@ -7,3 +7,11 @@
 //
 
 #include "Pawn.hpp"
+
+Pawn::Pawn(int x, int y, int scale, string side): Piece(x, y, scale, side, "pawn") {
+    
+}
+
+vector<Tile> Pawn::getLegalMoves() {
+    return vector<Tile>();
+}

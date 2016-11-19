@@ -19,14 +19,7 @@ void ChessGame::startGame() {
     }
     window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     
-    Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
-        return EXIT_FAILURE;
-    }
-    Sprite sprite(texture);
-    
-    ChessBoard board;
-    board.setScale(900);
+    ChessBoard board(900);
     
     while (window->isOpen()) {
         Event event;
@@ -48,6 +41,9 @@ void ChessGame::startGame() {
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
                 window->draw(*board.tiles[x][y]->getRect());
+                if (board.pieces[x][y] != nullptr) {
+                    window->draw(*board.pieces[x][y]->getSprite());
+                }
             }
         }
         

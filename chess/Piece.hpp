@@ -11,15 +11,12 @@
 
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
+#include <Tile.hpp>
 #include <iostream>
+#include <Vector>
 
 using namespace sf;
 using namespace std;
-
-enum PieceSide {
-    WHITE,
-    BLACK
-};
 
 class Piece {
 public:
@@ -29,14 +26,15 @@ public:
     void setScale(int scale);
     Sprite* getSprite();
     
-    virtual int* getLegalMoves() = 0;
+    virtual vector<Tile> getLegalMoves() = 0;
 protected:
-    Piece(int x, int y, int scale, PieceSide side);
+    Piece(int x, int y, int scale, string side, string textureName);
+    void update();
     
     int x;
     int y;
     int scale;
-    PieceSide side;
+    string side;
     Texture* texture;
     Sprite* sprite;
 };
