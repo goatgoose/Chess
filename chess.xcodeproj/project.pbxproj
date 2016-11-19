@@ -27,6 +27,7 @@
 		254F04971DE0D9E6002AFD3C /* queen-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048B1DE0D9E6002AFD3C /* queen-white.png */; };
 		254F04981DE0D9E6002AFD3C /* rook-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048C1DE0D9E6002AFD3C /* rook-black.png */; };
 		254F04991DE0D9E6002AFD3C /* rook-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048D1DE0D9E6002AFD3C /* rook-white.png */; };
+		254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049A1DE0F4C9002AFD3C /* Rook.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		254F048B1DE0D9E6002AFD3C /* queen-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "queen-white.png"; path = "resources/queen-white.png"; sourceTree = "<group>"; };
 		254F048C1DE0D9E6002AFD3C /* rook-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rook-black.png"; path = "resources/rook-black.png"; sourceTree = "<group>"; };
 		254F048D1DE0D9E6002AFD3C /* rook-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rook-white.png"; path = "resources/rook-white.png"; sourceTree = "<group>"; };
+		254F049A1DE0F4C9002AFD3C /* Rook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
+		254F049B1DE0F4C9002AFD3C /* Rook.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rook.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 			children = (
 				254F04801DE0CF54002AFD3C /* Pawn.hpp */,
 				254F047F1DE0CF54002AFD3C /* Pawn.cpp */,
+				254F049B1DE0F4C9002AFD3C /* Rook.hpp */,
+				254F049A1DE0F4C9002AFD3C /* Rook.cpp */,
 			);
 			name = Pieces;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
 				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
+				254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */,
 				254F04741DE0AB9D002AFD3C /* ChessGame.cpp in Sources */,
 				254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */,
 				254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */,
