@@ -26,6 +26,7 @@ void ChessGame::startGame() {
     Sprite sprite(texture);
     
     ChessBoard board;
+    board.setScale(900);
     
     while (window->isOpen()) {
         Event event;
@@ -33,12 +34,27 @@ void ChessGame::startGame() {
             
             if (event.type == Event::Closed) {
                 window->close();
+            } else if (event.type == Event::Resized) {
+                // http://stackoverflow.com/questions/27785940/shapes-proportionally-resize-with-window-in-sfml-2-x
+                window->setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
+                
+                if (event.size.width > event.size.height) {
+                    board.setScale(event.size.height);
+                } else {
+                    board.setScale(event.size.width);
+                }
             }
             
         }
         
         window->clear();
-        window->draw(sprite);
+        
+        for (int x = 0; x < 8; x++) {
+            for (int y = 0; y < 8; y++) {
+                window->draw(*board.tiles[x][y]->getRect());
+            }
+        }
+        
         window->display();
     }
 }

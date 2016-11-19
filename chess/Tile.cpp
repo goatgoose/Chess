@@ -11,11 +11,24 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 
-Tile::Tile(int x, int y, TileColor color) {
+Tile::Tile(int x, int y, int scale, TileColor color) {
     this->x = x;
     this->y = y;
+    this->scale = scale;
     this->color = color;
-    this->rect = RectangleShape();
+    
+    rect = new RectangleShape();
+    rect->setSize(Vector2f(scale, scale));
+    rect->setPosition(Vector2f(scale * x, scale * y));
+    if (color == WHITE) {
+        rect->setFillColor(Color(255, 255, 255));
+    } else {
+        rect->setFillColor(Color(0, 0, 0));
+    }
+}
+
+Tile::~Tile() {
+    delete this->rect;
 }
 
 int Tile::getX() {
@@ -30,7 +43,7 @@ TileColor Tile::getColor() {
     return this->color;
 }
 
-RectangleShape Tile::getRect() {
-    rect.setSize(Vector2f());
+RectangleShape* Tile::getRect() {
+    return this->rect;
 }
 

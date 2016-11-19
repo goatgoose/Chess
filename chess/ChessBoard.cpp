@@ -21,17 +21,19 @@ void ChessBoard::createTiles(bool alreadyExists = true) {
             }
             
             if (tileIsWhite) {
-                tiles[x][y] = new Tile(x, y, WHITE);
+                tiles[x][y] = new Tile(x, y, getOffset(), WHITE);
             } else {
-                tiles[x][y] = new Tile(x, y, BLACK);
+                tiles[x][y] = new Tile(x, y, getOffset(), BLACK);
             }
             tileIsWhite = !tileIsWhite;
         }
+        tileIsWhite = !tileIsWhite;
     }
 }
 
 void ChessBoard::setScale(int scale) {
     this->scale = scale;
+    createTiles();
 }
 
 int ChessBoard::getOffset() {

@@ -25,18 +25,20 @@ enum TileColor {
 
 class Tile {
 public:
-    Tile(int x, int y, TileColor color);
+    Tile(int x, int y, int scale, TileColor color);
+    ~Tile();
     
     int getX();
     int getY();
     TileColor getColor();
-    RectangleShape getRect();
+    RectangleShape* getRect();
     
 private:
     int x;
     int y;
+    int scale;
     TileColor color;
-    RectangleShape rect;
+    RectangleShape* rect;
 };
 
 #endif /* Tile_hpp */
