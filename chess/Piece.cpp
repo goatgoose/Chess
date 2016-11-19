@@ -26,8 +26,12 @@ void Piece::setScale(int scale) {
 }
 
 void Piece::update() {
-    sprite->setScale(Vector2f(0.35, 0.35));
-    sprite->setPosition(Vector2f(scale * x + scale / 5, scale * y + scale / 7));
+    double pieceScale = (double) scale / 320;
+    sprite->setScale(Vector2f(pieceScale, pieceScale));
+    
+    int xPos = (scale * x) + ((scale / 2) - (sprite->getGlobalBounds().width / 2));
+    int yPos = (scale * y) + ((scale / 2) - (sprite->getGlobalBounds().height / 2));
+    sprite->setPosition(Vector2f(xPos, yPos));
 }
 
 void Piece::moveTo(int x, int y) {
