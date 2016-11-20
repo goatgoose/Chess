@@ -25,7 +25,7 @@ public:
     void startGame();
     RenderWindow* window;
     
-    bool pickedUpPiece;
+    Piece* pickedUpPiece;
     
     void addClickable(Clickable* clickable);
     void removeClickable(string id);

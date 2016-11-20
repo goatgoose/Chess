@@ -10,7 +10,7 @@
 
 ChessGame::ChessGame() {
     this->window = new RenderWindow(VideoMode(1440, 900), "SFML window");
-    this->pickedUpPiece = false;
+    this->pickedUpPiece = nullptr;
 }
 
 void ChessGame::startGame() {
@@ -34,7 +34,7 @@ void ChessGame::startGame() {
                 
                 board.setScale(event.size.height);
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
-                cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
+                //cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
                 
                 for (int i = 0; i < clickables.size(); i++) {
                     Clickable* clickable = clickables[i];
@@ -44,6 +44,7 @@ void ChessGame::startGame() {
                         event.mouseButton.y < clickable->y2) {
                         
                         clickable->callback();
+                        break;
                     }
                 }
             }
