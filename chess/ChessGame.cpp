@@ -34,6 +34,7 @@ void ChessGame::startGame() {
                 board.setScale(event.size.height);
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                 cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
+                board.tiles[0][1]->piece->moveTo(5, 5);
             }
             
         }

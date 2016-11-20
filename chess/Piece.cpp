@@ -35,8 +35,11 @@ void Piece::update() {
 }
 
 void Piece::moveTo(int x, int y) {
+    board->tiles[this->x][this->y]->piece = nullptr;
     this->x = x;
     this->y = y;
+    board->tiles[this->x][this->y]->piece = this;
+    
     update();
 }
 
