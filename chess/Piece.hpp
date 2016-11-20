@@ -24,7 +24,7 @@ class Piece {
 public:
     ~Piece();
     
-    virtual void moveTo(int x, int y);
+    virtual void moveTo(Tile* tile);
     void update();
     virtual vector<Tile*> getLegalMoves() = 0;
     

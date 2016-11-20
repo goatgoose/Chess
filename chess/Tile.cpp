@@ -41,6 +41,31 @@ void Tile::update() {
 
 void Tile::clickEvent() {
     cout << "click for: " << x << ", " << y << endl;
+    if (board->game->pickedUpPiece == nullptr) {
+        if (piece != nullptr) {
+            cout << "u clicked on a piece ;)" << endl;
+            board->game->pickedUpPiece = piece;
+        }
+    } else {
+        bool isALegalMove = false;
+        Tile* legalMove;
+        vector<Tile*> legalMoves = board->game->pickedUpPiece->getLegalMoves();
+        for (int i = 0; i < legalMoves.size(); i++) {
+            legalMove = legalMoves[i];
+            if (legalMove->getX() == this->x && legalMove->getY() == this->y) {
+                isALegalMove = true;
+                break;
+            }
+        }
+        
+        if (isALegalMove) {
+            piece->moveTo(legalMove);
+        } else {
+            // if its not a legal move u clicked a blank tile, so put it back down
+            board->game->pickedUpPiece = nullptr;
+        }
+        
+    }
 }
 
 int Tile::getX() {

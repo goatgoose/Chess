@@ -50,8 +50,8 @@ vector<Tile*> Pawn::getLegalMoves() {
     return legalMoves;
 }
 
-void Pawn::moveTo(int x, int y) {
-    Piece::moveTo(x, y);
+void Pawn::moveTo(Tile* tile) {
+    Piece::moveTo(tile);
     hasMoved = true;
 }
 

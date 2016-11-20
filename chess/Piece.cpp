@@ -34,10 +34,10 @@ void Piece::update() {
     sprite->setPosition(Vector2f(xPos, yPos));
 }
 
-void Piece::moveTo(int x, int y) {
+void Piece::moveTo(Tile* tile) {
     board->tiles[this->x][this->y]->piece = nullptr;
-    this->x = x;
-    this->y = y;
+    this->x = tile->getX();
+    this->y = tile->getY();
     board->tiles[this->x][this->y]->piece = this;
     
     update();
