@@ -31,6 +31,9 @@ public:
     
     void update();
     
+    void highlight();
+    void resetHighlight();
+    
     int getX();
     int getY();
     Side getSide();

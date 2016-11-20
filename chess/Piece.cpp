@@ -38,7 +38,7 @@ void Piece::moveTo(Tile* tile) {
     board->tiles[this->x][this->y]->piece = nullptr;
     this->x = tile->getX();
     this->y = tile->getY();
-    board->tiles[this->x][this->y]->piece = this;
+    tile->piece = this;
     
     update();
 }

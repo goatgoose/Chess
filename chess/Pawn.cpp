@@ -16,9 +16,9 @@ Pawn::Pawn(int x, int y, Player* player): Piece(x, y, player, "pawn") {
 vector<Tile*> Pawn::getLegalMoves() {
     int teamDirection;
     if (player->getSide() == WHITE) {
-        teamDirection = -1;
-    } else {
         teamDirection = 1;
+    } else {
+        teamDirection = -1;
     }
     
     vector<Coordinate> moves;
@@ -38,13 +38,21 @@ vector<Tile*> Pawn::getLegalMoves() {
     }
     
     Tile* diagonalLeft = board->getTile(Coordinate(x - 1, y + teamDirection));
-    if (diagonalLeft->piece != nullptr && diagonalLeft->piece->getSide() != this->side) {
-        legalMoves.push_back(diagonalLeft);
+    if (diagonalLeft != nullptr) { // if the tile exists
+        if (diagonalLeft->piece != nullptr) { // if the tile contains a piece
+            if (diagonalLeft->piece->getSide() != this->side) {
+                legalMoves.push_back(diagonalLeft);
+            }
+        }
     }
     
     Tile* diagonalRight = board->getTile(Coordinate(x + 1, y + teamDirection));
-    if (diagonalRight->piece != nullptr && diagonalRight->piece->getSide() != this->side) {
-        legalMoves.push_back(diagonalRight);
+    if (diagonalRight != nullptr) {
+        if (diagonalRight->piece != nullptr) {
+            if (diagonalRight->piece->getSide() != this->side) {
+                legalMoves.push_back(diagonalRight);
+            }
+        }
     }
     
     return legalMoves;

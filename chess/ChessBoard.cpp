@@ -72,9 +72,9 @@ int ChessBoard::getOffset() {
 
 Tile* ChessBoard::getTile(Coordinate coordinate) {
     // check if out of bounds
-    if (coordinate.getX() > 7 &&
-        coordinate.getX() < 0 &&
-        coordinate.getY() > 7 &&
+    if (coordinate.getX() > 7 ||
+        coordinate.getX() < 0 ||
+        coordinate.getY() > 7 ||
         coordinate.getY() < 0) {
         
         return nullptr;

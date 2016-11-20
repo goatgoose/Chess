@@ -41,30 +41,46 @@ void Tile::update() {
 
 void Tile::clickEvent() {
     cout << "click for: " << x << ", " << y << endl;
-    if (board->game->pickedUpPiece == nullptr) {
+    if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
         if (piece != nullptr) {
             cout << "u clicked on a piece ;)" << endl;
             board->game->pickedUpPiece = piece;
+            
+            vector<Tile*> legalMoves = piece->getLegalMoves();
+            for (int i = 0; i < legalMoves.size(); i++) {
+                Tile* legalMove = legalMoves[i];
+                legalMove->highlight();
+            }
         }
-    } else {
+    } else { // move a piece mode
         bool isALegalMove = false;
-        Tile* legalMove;
         vector<Tile*> legalMoves = board->game->pickedUpPiece->getLegalMoves();
         for (int i = 0; i < legalMoves.size(); i++) {
-            legalMove = legalMoves[i];
+            Tile* legalMove = legalMoves[i];
             if (legalMove->getX() == this->x && legalMove->getY() == this->y) {
                 isALegalMove = true;
-                break;
             }
+            legalMove->resetHighlight();
         }
         
         if (isALegalMove) {
-            piece->moveTo(legalMove);
-        } else {
-            // if its not a legal move u clicked a blank tile, so put it back down
-            board->game->pickedUpPiece = nullptr;
+            board->game->pickedUpPiece->moveTo(this);
         }
         
+        board->game->pickedUpPiece = nullptr;
+        
+    }
+}
+
+void Tile::highlight() {
+    rect->setFillColor(Color(0, 255, 255));
+}
+
+void Tile::resetHighlight() {
+    if (side == WHITE) {
+        rect->setFillColor(Color(246, 246, 246));
+    } else {
+        rect->setFillColor(Color(75, 75, 75));
     }
 }
 
