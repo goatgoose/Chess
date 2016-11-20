@@ -47,5 +47,6 @@ TileColor Tile::getColor() {
 
 Tile::~Tile() {
     delete this->rect;
+    delete this->piece;
 }
 
