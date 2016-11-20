@@ -20,9 +20,9 @@ void ChessBoard::createTiles() {
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
             if (tileIsWhite) {
-                tiles[x][y] = new Tile(x, y, getOffset(), WHITE);
+                tiles[x][y] = new Tile(x, y, WHITE, this);
             } else {
-                tiles[x][y] = new Tile(x, y, getOffset(), BLACK);
+                tiles[x][y] = new Tile(x, y, BLACK, this);
             }
             tileIsWhite = !tileIsWhite;
         }
@@ -46,7 +46,7 @@ void ChessBoard::createPieces() {
 void ChessBoard::update() {
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
-            tiles[x][y]->setScale(getOffset());
+            tiles[x][y]->update();
             if (tiles[x][y]->piece != nullptr) {
                 tiles[x][y]->piece->setScale(getOffset());
             }

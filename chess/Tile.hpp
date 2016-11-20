@@ -17,6 +17,8 @@
 using namespace std;
 using namespace sf;
 
+class ChessBoard;
+
 enum TileColor {
     WHITE,
     BLACK
@@ -24,26 +26,24 @@ enum TileColor {
 
 class Tile {
 public:
-    Tile(int x, int y, int scale, TileColor color);
+    Tile(int x, int y, TileColor color, ChessBoard* board);
     ~Tile();
     
     Piece* piece;
-    
     RectangleShape* rect;
     
-    void setScale(int scale);
+    void update();
     
     int getX();
     int getY();
     TileColor getColor();
     
 private:
-    void update();
     
     int x;
     int y;
-    int scale;
     TileColor color;
+    ChessBoard* board;
 };
 
 #endif /* Tile_hpp */

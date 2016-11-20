@@ -7,11 +7,12 @@
 //
 
 #include "Tile.hpp"
+#include "ChessBoard.hpp"
 
-Tile::Tile(int x, int y, int scale, TileColor color) {
+Tile::Tile(int x, int y, TileColor color, ChessBoard* board) {
     this->x = x;
     this->y = y;
-    this->scale = scale;
+    this->board = board;
     this->color = color;
     
     rect = new RectangleShape();
@@ -23,12 +24,8 @@ Tile::Tile(int x, int y, int scale, TileColor color) {
     update();
 }
 
-void Tile::setScale(int scale) {
-    this->scale = scale;
-    update();
-}
-
 void Tile::update() {
+    int scale = board->getOffset();
     rect->setSize(Vector2f(scale, scale));
     rect->setPosition(Vector2f(scale * x, scale * y));
 }
