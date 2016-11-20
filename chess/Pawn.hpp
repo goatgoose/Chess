@@ -20,8 +20,8 @@ using namespace sf;
 
 class Pawn: public Piece {
 public:
-    Pawn(int x, int y, int scale, string side);
-    virtual vector<int*> getLegalMoves(Piece* pieces) override;
+    Pawn(int x, int y, string side, ChessBoard* board);
+    virtual vector<Tile*> getLegalMoves() override;
 };
 
 #endif /* Pawn_hpp */

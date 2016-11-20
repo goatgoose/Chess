@@ -8,10 +8,10 @@
 
 #include "Pawn.hpp"
 
-Pawn::Pawn(int x, int y, int scale, string side): Piece(x, y, scale, side, "pawn") {
+Pawn::Pawn(int x, int y, string side, ChessBoard* board): Piece(x, y, side, "pawn", board) {
     
 }
 
-vector<int*> Pawn::getLegalMoves(Piece* pieces) {
-    return vector<int*>();
+vector<Tile*> Pawn::getLegalMoves() {
+    return vector<Tile*>();
 }

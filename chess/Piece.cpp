@@ -7,12 +7,13 @@
 //
 
 #include "Piece.hpp"
+#include "ChessBoard.hpp"
 
-Piece::Piece(int x, int y, int scale, string side, string textureName) {
+Piece::Piece(int x, int y, string side, string textureName, ChessBoard* board) {
     this->x = x;
     this->y = y;
-    this->scale = scale;
     this->side = side;
+    this->board = board;
     
     texture = new Texture();
     texture->loadFromFile(resourcePath() + textureName + "-" + side + ".png");
@@ -20,12 +21,8 @@ Piece::Piece(int x, int y, int scale, string side, string textureName) {
     update();
 }
 
-void Piece::setScale(int scale) {
-    this->scale = scale;
-    update();
-}
-
 void Piece::update() {
+    int scale = board->getOffset();
     double pieceScale = (double) scale / 320;
     sprite->setScale(Vector2f(pieceScale, pieceScale));
     

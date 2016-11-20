@@ -8,10 +8,10 @@
 
 #include "Rook.hpp"
 
-Rook::Rook(int x, int y, int scale, string side): Piece(x, y, scale, side, "rook") {
+Rook::Rook(int x, int y, string side, ChessBoard* board): Piece(x, y, side, "rook", board) {
     
 }
 
-vector<int*> Rook::getLegalMoves(Piece* pieces) {
-    return vector<int*>();
+vector<Tile*> Rook::getLegalMoves() {
+    return vector<Tile*>();
 }

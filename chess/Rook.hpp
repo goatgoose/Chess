@@ -19,8 +19,8 @@ using namespace sf;
 
 class Rook: public Piece {
 public:
-    Rook(int x, int y, int scale, string side);
-    virtual vector<int*> getLegalMoves(Piece* pieces) override;
+    Rook(int x, int y, string side, ChessBoard* board);
+    virtual vector<Tile*> getLegalMoves() override;
 };
 
 #endif /* Rook_hpp */

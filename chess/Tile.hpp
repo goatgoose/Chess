@@ -12,12 +12,12 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>
-#include <Piece.hpp>
 
 using namespace std;
 using namespace sf;
 
 class ChessBoard;
+class Piece;
 
 enum TileColor {
     WHITE,

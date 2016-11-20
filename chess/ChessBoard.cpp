@@ -38,8 +38,8 @@ void ChessBoard::createPieces() {
     }
     
     for (int x = 0; x < 8; x++) {
-        tiles[x][1]->piece = new Pawn(x, 1, getOffset(), "black");
-        tiles[x][6]->piece = new Pawn(x, 6, getOffset(), "white");
+        tiles[x][1]->piece = new Pawn(x, 1, "black", this);
+        tiles[x][6]->piece = new Pawn(x, 6, "white", this);
     }
 }
 
@@ -48,7 +48,7 @@ void ChessBoard::update() {
         for (int y = 0; y < 8; y++) {
             tiles[x][y]->update();
             if (tiles[x][y]->piece != nullptr) {
-                tiles[x][y]->piece->setScale(getOffset());
+                tiles[x][y]->piece->update();
             }
         }
     }

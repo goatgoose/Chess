@@ -13,28 +13,30 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 #include <Vector>
+#include <Tile.hpp>
 
 using namespace sf;
 using namespace std;
+
+class ChessBoard;
 
 class Piece {
 public:
     ~Piece();
     
     void moveTo(int x, int y);
-    void setScale(int scale);
+    void update();
     Sprite* getSprite();
     
-    virtual vector<int*> getLegalMoves(Piece* pieces) = 0;
+    virtual vector<Tile*> getLegalMoves() = 0;
 protected:
-    Piece(int x, int y, int scale, string side, string textureName);
-    void update();
+    Piece(int x, int y, string side, string textureName, ChessBoard* board);
     
     int x;
     int y;
-    int scale;
     string side;
     Texture* texture;
+    ChessBoard* board;
     Sprite* sprite;
 };
 
