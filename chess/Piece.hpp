@@ -11,7 +11,6 @@
 
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
-#include <Tile.hpp>
 #include <iostream>
 #include <Vector>
 

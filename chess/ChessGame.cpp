@@ -42,9 +42,9 @@ void ChessGame::startGame() {
         
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
-                window->draw(*board.tiles[x][y]->getRect());
-                if (board.pieces[x][y] != nullptr) {
-                    window->draw(*board.pieces[x][y]->getSprite());
+                window->draw(*board.tiles[x][y]->rect);
+                if (board.tiles[x][y]->piece != nullptr) {
+                    window->draw(*board.tiles[x][y]->piece->getSprite());
                 }
             }
         }

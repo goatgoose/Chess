@@ -9,10 +9,10 @@
 #ifndef Tile_hpp
 #define Tile_hpp
 
-#include <Tile.hpp>
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>
+#include <Piece.hpp>
 
 using namespace std;
 using namespace sf;
@@ -27,12 +27,15 @@ public:
     Tile(int x, int y, int scale, TileColor color);
     ~Tile();
     
+    Piece* piece;
+    
+    RectangleShape* rect;
+    
     void setScale(int scale);
     
     int getX();
     int getY();
     TileColor getColor();
-    RectangleShape* getRect();
     
 private:
     void update();
@@ -41,7 +44,6 @@ private:
     int y;
     int scale;
     TileColor color;
-    RectangleShape* rect;
 };
 
 #endif /* Tile_hpp */

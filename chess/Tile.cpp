@@ -45,10 +45,6 @@ TileColor Tile::getColor() {
     return this->color;
 }
 
-RectangleShape* Tile::getRect() {
-    return this->rect;
-}
-
 Tile::~Tile() {
     delete this->rect;
 }

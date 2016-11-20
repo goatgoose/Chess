@@ -33,13 +33,13 @@ void ChessBoard::createTiles() {
 void ChessBoard::createPieces() {
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
-            pieces[x][y] = nullptr;
+            tiles[x][y]->piece = nullptr;
         }
     }
     
     for (int x = 0; x < 8; x++) {
-        pieces[x][1] = new Pawn(x, 1, getOffset(), "black");
-        pieces[x][6] = new Pawn(x, 6, getOffset(), "white");
+        tiles[x][1]->piece = new Pawn(x, 1, getOffset(), "black");
+        tiles[x][6]->piece = new Pawn(x, 6, getOffset(), "white");
     }
 }
 
@@ -47,8 +47,8 @@ void ChessBoard::update() {
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
             tiles[x][y]->setScale(getOffset());
-            if (pieces[x][y] != nullptr) {
-                pieces[x][y]->setScale(getOffset());
+            if (tiles[x][y]->piece != nullptr) {
+                tiles[x][y]->piece->setScale(getOffset());
             }
         }
     }

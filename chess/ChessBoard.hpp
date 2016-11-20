@@ -10,17 +10,20 @@
 #define ChessBoard_hpp
 
 #include <iostream>
-#include <Tile.hpp>
-#include <Piece.hpp>
 #include <Pawn.hpp>
+#include <Tile.hpp>
 
 using namespace std;
+
+class Player;
 
 class ChessBoard {
 public:
     ChessBoard(int scale);
     Tile* tiles[8][8];
-    Piece* pieces[8][8];
+    
+    Player* whitePlayer;
+    Player* blackPlayer;
     
     void setScale(int scale);
     int getOffset();
