@@ -8,7 +8,7 @@
 
 #include "Pawn.hpp"
 
-Pawn::Pawn(int x, int y, string side, ChessBoard* board): Piece(x, y, side, "pawn", board) {
+Pawn::Pawn(int x, int y, Player* player): Piece(x, y, player, "pawn") {
     
 }
 

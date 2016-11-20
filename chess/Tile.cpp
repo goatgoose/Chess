@@ -9,14 +9,14 @@
 #include "Tile.hpp"
 #include "ChessBoard.hpp"
 
-Tile::Tile(int x, int y, TileColor color, ChessBoard* board) {
+Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     this->x = x;
     this->y = y;
     this->board = board;
-    this->color = color;
+    this->side = side;
     
     rect = new RectangleShape();
-    if (color == WHITE) {
+    if (side == WHITE) {
         rect->setFillColor(Color(246, 246, 246));
     } else {
         rect->setFillColor(Color(75, 75, 75));
@@ -38,8 +38,8 @@ int Tile::getY() {
     return this->y;
 }
 
-TileColor Tile::getColor() {
-    return this->color;
+Side Tile::getSide() {
+    return this->side;
 }
 
 Tile::~Tile() {

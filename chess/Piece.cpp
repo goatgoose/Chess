@@ -9,15 +9,18 @@
 #include "Piece.hpp"
 #include "ChessBoard.hpp"
 
-Piece::Piece(int x, int y, string side, string textureName, ChessBoard* board) {
+Piece::Piece(int x, int y, Player* player, string textureName) {
     this->x = x;
     this->y = y;
-    this->side = side;
-    this->board = board;
+    this->player = player;
+    
+    this->board = player->board;
+    this->side = player->getSide();
     
     texture = new Texture();
-    texture->loadFromFile(resourcePath() + textureName + "-" + side + ".png");
+    texture->loadFromFile(resourcePath() + textureName + "-" + player->getSideString() + ".png");
     sprite = new Sprite(*texture);
+    
     update();
 }
 

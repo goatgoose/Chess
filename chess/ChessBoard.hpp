@@ -12,10 +12,9 @@
 #include <iostream>
 #include <Pawn.hpp>
 #include <Tile.hpp>
+#include <Player.hpp>
 
 using namespace std;
-
-class Player;
 
 class ChessBoard {
 public:

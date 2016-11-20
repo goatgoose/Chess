@@ -19,7 +19,7 @@ using namespace sf;
 
 class Rook: public Piece {
 public:
-    Rook(int x, int y, string side, ChessBoard* board);
+    Rook(int x, int y, Player* player);
     virtual vector<Tile*> getLegalMoves() override;
 };
 

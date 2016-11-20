@@ -11,6 +11,9 @@
 ChessBoard::ChessBoard(int scale) {
     this->scale = scale;
     
+    this->whitePlayer = new Player(WHITE, this);
+    this->blackPlayer = new Player(BLACK, this);
+    
     createTiles();
     createPieces();
 }
@@ -38,8 +41,8 @@ void ChessBoard::createPieces() {
     }
     
     for (int x = 0; x < 8; x++) {
-        tiles[x][1]->piece = new Pawn(x, 1, "black", this);
-        tiles[x][6]->piece = new Pawn(x, 6, "white", this);
+        tiles[x][1]->piece = new Pawn(x, 1, whitePlayer);
+        tiles[x][6]->piece = new Pawn(x, 6, blackPlayer);
     }
 }
 

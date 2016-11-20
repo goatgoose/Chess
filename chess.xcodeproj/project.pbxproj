@@ -28,6 +28,7 @@
 		254F04981DE0D9E6002AFD3C /* rook-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048C1DE0D9E6002AFD3C /* rook-black.png */; };
 		254F04991DE0D9E6002AFD3C /* rook-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048D1DE0D9E6002AFD3C /* rook-white.png */; };
 		254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049A1DE0F4C9002AFD3C /* Rook.cpp */; };
+		254F049F1DE20F06002AFD3C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049D1DE20F06002AFD3C /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		254F048D1DE0D9E6002AFD3C /* rook-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rook-white.png"; path = "resources/rook-white.png"; sourceTree = "<group>"; };
 		254F049A1DE0F4C9002AFD3C /* Rook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
 		254F049B1DE0F4C9002AFD3C /* Rook.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rook.hpp; sourceTree = "<group>"; };
+		254F049D1DE20F06002AFD3C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		254F049E1DE20F06002AFD3C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				254F04721DE0AB9D002AFD3C /* ChessGame.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
+				254F049E1DE20F06002AFD3C /* Player.hpp */,
+				254F049D1DE20F06002AFD3C /* Player.cpp */,
 				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
 				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
 				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
@@ -249,6 +254,7 @@
 			files = (
 				254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */,
 				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
+				254F049F1DE20F06002AFD3C /* Player.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
 				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
 				254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */,

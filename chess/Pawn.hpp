@@ -10,7 +10,6 @@
 #define Pawn_hpp
 
 #include <Piece.hpp>
-#include <ChessBoard.hpp>
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>
@@ -20,7 +19,7 @@ using namespace sf;
 
 class Pawn: public Piece {
 public:
-    Pawn(int x, int y, string side, ChessBoard* board);
+    Pawn(int x, int y, Player* player);
     virtual vector<Tile*> getLegalMoves() override;
 };
 

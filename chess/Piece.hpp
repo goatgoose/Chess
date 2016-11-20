@@ -14,11 +14,10 @@
 #include <iostream>
 #include <Vector>
 #include <Tile.hpp>
+#include <Player.hpp>
 
 using namespace sf;
 using namespace std;
-
-class ChessBoard;
 
 class Piece {
 public:
@@ -26,17 +25,20 @@ public:
     
     void moveTo(int x, int y);
     void update();
-    Sprite* getSprite();
-    
     virtual vector<Tile*> getLegalMoves() = 0;
+    
+    Sprite* getSprite();
 protected:
-    Piece(int x, int y, string side, string textureName, ChessBoard* board);
+    Piece(int x, int y, Player* player, string textureName);
     
     int x;
     int y;
-    string side;
-    Texture* texture;
+    Player* player;
+    
     ChessBoard* board;
+    Side side;
+    
+    Texture* texture;
     Sprite* sprite;
 };
 

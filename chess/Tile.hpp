@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>
+#include <Player.hpp>
 
 using namespace std;
 using namespace sf;
@@ -19,14 +20,9 @@ using namespace sf;
 class ChessBoard;
 class Piece;
 
-enum TileColor {
-    WHITE,
-    BLACK
-};
-
 class Tile {
 public:
-    Tile(int x, int y, TileColor color, ChessBoard* board);
+    Tile(int x, int y, Side color, ChessBoard* board);
     ~Tile();
     
     Piece* piece;
@@ -36,13 +32,13 @@ public:
     
     int getX();
     int getY();
-    TileColor getColor();
+    Side getSide();
     
 private:
     
     int x;
     int y;
-    TileColor color;
+    Side side;
     ChessBoard* board;
 };
 

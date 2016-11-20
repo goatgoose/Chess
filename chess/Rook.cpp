@@ -8,7 +8,7 @@
 
 #include "Rook.hpp"
 
-Rook::Rook(int x, int y, string side, ChessBoard* board): Piece(x, y, side, "rook", board) {
+Rook::Rook(int x, int y, Player* player): Piece(x, y, player, "rook") {
     
 }
 
