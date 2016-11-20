@@ -32,6 +32,8 @@ void ChessGame::startGame() {
                 window->setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
                 
                 board.setScale(event.size.height);
+            } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
+                cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
             }
             
         }

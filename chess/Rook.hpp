@@ -20,7 +20,7 @@ using namespace sf;
 class Rook: public Piece {
 public:
     Rook(int x, int y, int scale, string side);
-    virtual vector<Tile> getLegalMoves() override;
+    virtual vector<int*> getLegalMoves(Piece* pieces) override;
 };
 
 #endif /* Rook_hpp */

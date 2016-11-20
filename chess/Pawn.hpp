@@ -21,7 +21,7 @@ using namespace sf;
 class Pawn: public Piece {
 public:
     Pawn(int x, int y, int scale, string side);
-    virtual vector<Tile> getLegalMoves() override;
+    virtual vector<int*> getLegalMoves(Piece* pieces) override;
 };
 
 #endif /* Pawn_hpp */

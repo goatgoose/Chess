@@ -9,7 +9,6 @@
 #ifndef Tile_hpp
 #define Tile_hpp
 
-
 #include <Tile.hpp>
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"

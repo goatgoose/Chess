@@ -26,7 +26,7 @@ public:
     void setScale(int scale);
     Sprite* getSprite();
     
-    virtual vector<Tile> getLegalMoves() = 0;
+    virtual vector<int*> getLegalMoves(Piece* pieces) = 0;
 protected:
     Piece(int x, int y, int scale, string side, string textureName);
     void update();

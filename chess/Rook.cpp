@@ -12,6 +12,6 @@ Rook::Rook(int x, int y, int scale, string side): Piece(x, y, scale, side, "rook
     
 }
 
-vector<Tile> Rook::getLegalMoves() {
-    return vector<Tile>();
+vector<int*> Rook::getLegalMoves(Piece* pieces) {
+    return vector<int*>();
 }

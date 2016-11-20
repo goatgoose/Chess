@@ -7,9 +7,6 @@
 //
 
 #include "Tile.hpp"
-#include <SFML/Graphics.hpp>
-#include "ResourcePath.hpp"
-#include <iostream>
 
 Tile::Tile(int x, int y, int scale, TileColor color) {
     this->x = x;

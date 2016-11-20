@@ -12,6 +12,6 @@ Pawn::Pawn(int x, int y, int scale, string side): Piece(x, y, scale, side, "pawn
     
 }
 
-vector<Tile> Pawn::getLegalMoves() {
-    return vector<Tile>();
+vector<int*> Pawn::getLegalMoves(Piece* pieces) {
+    return vector<int*>();
 }
