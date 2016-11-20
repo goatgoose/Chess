@@ -10,6 +10,7 @@
 
 ChessGame::ChessGame() {
     this->window = new RenderWindow(VideoMode(1440, 900), "SFML window");
+    this->pickedUpPiece = false;
 }
 
 void ChessGame::startGame() {
@@ -19,7 +20,7 @@ void ChessGame::startGame() {
     }
     window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     
-    ChessBoard board(900);
+    ChessBoard board(900, this);
     
     while (window->isOpen()) {
         Event event;
@@ -34,7 +35,17 @@ void ChessGame::startGame() {
                 board.setScale(event.size.height);
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                 cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
-                board.tiles[0][1]->piece->moveTo(5, 5);
+                
+                for (int i = 0; i < clickables.size(); i++) {
+                    Clickable* clickable = clickables[i];
+                    if (event.mouseButton.x > clickable->x1 &&
+                        event.mouseButton.x < clickable->x2 &&
+                        event.mouseButton.y > clickable->y1 &&
+                        event.mouseButton.y < clickable->y2) {
+                        
+                        clickable->callback();
+                    }
+                }
             }
             
         }
@@ -53,3 +64,21 @@ void ChessGame::startGame() {
         window->display();
     }
 }
+
+void ChessGame::addClickable(Clickable* clickable) {
+    clickables.push_back(clickable);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

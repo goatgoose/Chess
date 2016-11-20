@@ -15,6 +15,7 @@
 #include <Vector>
 #include <Tile.hpp>
 #include <Player.hpp>
+#include <Coordinate.hpp>
 
 using namespace sf;
 using namespace std;
@@ -23,11 +24,14 @@ class Piece {
 public:
     ~Piece();
     
-    void moveTo(int x, int y);
+    virtual void moveTo(int x, int y);
     void update();
     virtual vector<Tile*> getLegalMoves() = 0;
     
+    bool moveIsPossible(Coordinate move);
+    
     Sprite* getSprite();
+    Side getSide();
 protected:
     Piece(int x, int y, Player* player, string textureName);
     

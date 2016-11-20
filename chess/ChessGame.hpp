@@ -13,6 +13,7 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 #include <ChessBoard.hpp>
+#include <Clickable.hpp>
 
 using namespace std;
 using namespace sf;
@@ -23,6 +24,14 @@ public:
     
     void startGame();
     RenderWindow* window;
+    
+    bool pickedUpPiece;
+    
+    void addClickable(Clickable* clickable);
+    void removeClickable(string id);
+    
+private:
+    vector<Clickable*> clickables;
 };
 
 #endif /* ChessGame_hpp */

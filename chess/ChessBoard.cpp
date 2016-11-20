@@ -7,9 +7,11 @@
 //
 
 #include "ChessBoard.hpp"
+#include "ChessGame.hpp"
 
-ChessBoard::ChessBoard(int scale) {
+ChessBoard::ChessBoard(int scale, ChessGame* game) {
     this->scale = scale;
+    this->game = game;
     
     this->whitePlayer = new Player(WHITE, this);
     this->blackPlayer = new Player(BLACK, this);
@@ -22,11 +24,13 @@ void ChessBoard::createTiles() {
     bool tileIsWhite = true;
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
+            Side side;
             if (tileIsWhite) {
-                tiles[x][y] = new Tile(x, y, WHITE, this);
+                side = WHITE;
             } else {
-                tiles[x][y] = new Tile(x, y, BLACK, this);
+                side = BLACK;
             }
+            tiles[x][y] = new Tile(x, y, side, this);
             tileIsWhite = !tileIsWhite;
         }
         tileIsWhite = !tileIsWhite;
@@ -64,4 +68,16 @@ void ChessBoard::setScale(int scale) {
 
 int ChessBoard::getOffset() {
     return this->scale / 8;
+}
+
+Tile* ChessBoard::getTile(Coordinate coordinate) {
+    // check if out of bounds
+    if (coordinate.getX() > 7 &&
+        coordinate.getX() < 0 &&
+        coordinate.getY() > 7 &&
+        coordinate.getY() < 0) {
+        
+        return nullptr;
+    }
+    return tiles[coordinate.getX()][coordinate.getY()];
 }

@@ -16,9 +16,14 @@
 
 using namespace std;
 
+class ChessGame;
+
 class ChessBoard {
 public:
-    ChessBoard(int scale);
+    ChessBoard(int scale, ChessGame* game);
+    
+    ChessGame* game;
+    
     Tile* tiles[8][8];
     
     Player* whitePlayer;
@@ -26,6 +31,7 @@ public:
     
     void setScale(int scale);
     int getOffset();
+    Tile* getTile(Coordinate coordinate);
 private:
     void update();
     

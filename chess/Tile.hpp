@@ -13,6 +13,7 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 #include <Player.hpp>
+#include <Clickable.hpp>
 
 using namespace std;
 using namespace sf;
@@ -22,7 +23,7 @@ class Piece;
 
 class Tile {
 public:
-    Tile(int x, int y, Side color, ChessBoard* board);
+    Tile(int x, int y, Side color, ChessBoard* board); // pass player
     ~Tile();
     
     Piece* piece;
@@ -34,12 +35,15 @@ public:
     int getY();
     Side getSide();
     
-private:
+    void clickEvent();
     
+private:
     int x;
     int y;
     Side side;
     ChessBoard* board;
+    
+    Clickable* clickable;
 };
 
 #endif /* Tile_hpp */
