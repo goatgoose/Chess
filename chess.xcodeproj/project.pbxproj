@@ -34,6 +34,7 @@
 		254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A61DE2BE51002AFD3C /* Knight.cpp */; };
 		254F04AB1DE2C507002AFD3C /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A91DE2C507002AFD3C /* Bishop.cpp */; };
 		254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AC1DE33D56002AFD3C /* Queen.cpp */; };
+		254F04B11DE341B4002AFD3C /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AF1DE341B4002AFD3C /* King.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,8 @@
 		254F04AA1DE2C507002AFD3C /* Bishop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bishop.hpp; sourceTree = "<group>"; };
 		254F04AC1DE33D56002AFD3C /* Queen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queen.cpp; sourceTree = "<group>"; };
 		254F04AD1DE33D56002AFD3C /* Queen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queen.hpp; sourceTree = "<group>"; };
+		254F04AF1DE341B4002AFD3C /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		254F04B01DE341B4002AFD3C /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				254F04A91DE2C507002AFD3C /* Bishop.cpp */,
 				254F04AD1DE33D56002AFD3C /* Queen.hpp */,
 				254F04AC1DE33D56002AFD3C /* Queen.cpp */,
+				254F04B01DE341B4002AFD3C /* King.hpp */,
+				254F04AF1DE341B4002AFD3C /* King.cpp */,
 			);
 			name = Pieces;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */,
 				254F04741DE0AB9D002AFD3C /* ChessGame.cpp in Sources */,
 				254F04A21DE22321002AFD3C /* Coordinate.cpp in Sources */,
+				254F04B11DE341B4002AFD3C /* King.cpp in Sources */,
 				254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */,
 				254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */,
 				254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */,

@@ -66,6 +66,9 @@ void ChessBoard::createPieces() {
     
     tiles[3][0]->piece = new Queen(3, 0, whitePlayer);
     tiles[3][7]->piece = new Queen(3, 7, blackPlayer);
+    
+    tiles[4][0]->piece = new King(4, 0, whitePlayer);
+    tiles[4][7]->piece = new King(4, 7, blackPlayer);
 }
 
 void ChessBoard::update() {
