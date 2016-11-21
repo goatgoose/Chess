@@ -14,6 +14,7 @@
 #include <Tile.hpp>
 #include <Pawn.hpp>
 #include <Rook.hpp>
+#include <Knight.hpp>
 
 using namespace std;
 

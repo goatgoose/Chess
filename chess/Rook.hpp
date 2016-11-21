@@ -10,12 +10,6 @@
 #define Rook_hpp
 
 #include <Piece.hpp>
-#include <SFML/Graphics.hpp>
-#include "ResourcePath.hpp"
-#include <iostream>
-#include <Vector>
-
-using namespace sf;
 
 class Rook: public Piece {
 public:
