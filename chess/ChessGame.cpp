@@ -21,6 +21,11 @@ void ChessGame::startGame() {
     }
     window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     
+    background = new RectangleShape();
+    background->setSize(Vector2f(1440, 900));
+    background->setPosition(Vector2f(0, 0));
+    background->setFillColor(Color(38, 50, 71));
+    
     ChessBoard board(900, this);
     
     while (window->isOpen()) {
@@ -34,6 +39,7 @@ void ChessGame::startGame() {
                 window->setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
                 
                 board.setScale(event.size.height);
+                background->setSize(Vector2f(event.size.width, event.size.height));
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                 //cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
                 
@@ -53,6 +59,8 @@ void ChessGame::startGame() {
         }
         
         window->clear();
+        
+        window->draw(*background);
         
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {

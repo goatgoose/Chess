@@ -33,6 +33,8 @@ public:
     
 private:
     vector<Clickable*> clickables;
+    
+    RectangleShape* background;
 };
 
 #endif /* ChessGame_hpp */

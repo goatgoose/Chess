@@ -31,6 +31,8 @@ public:
     virtual bool moveIsPossible(Coordinate move);
     virtual bool moveIsPossible(Tile* tile);
     
+    Player* player;
+    
     Sprite* getSprite();
     Side getSide();
 protected:
@@ -38,7 +40,6 @@ protected:
     
     int x;
     int y;
-    Player* player;
     
     ChessBoard* board;
     Side side;

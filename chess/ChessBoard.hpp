@@ -20,6 +20,7 @@
 #include <King.hpp>
 
 using namespace std;
+using namespace sf;
 
 class ChessGame;
 
@@ -33,6 +34,10 @@ public:
     
     Player* whitePlayer;
     Player* blackPlayer;
+    Player* me;
+    Player* other;
+    
+    bool isMyTurn;
     
     void setScale(int scale);
     int getOffset();

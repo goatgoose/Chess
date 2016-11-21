@@ -37,37 +37,46 @@ void Tile::update() {
 
 void Tile::clickEvent() {
     cout << "click for: " << x << ", " << y << endl;
-    if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
-        if (piece != nullptr) {
-            board->game->pickedUpPiece = piece;
-            board->game->pickedUpPieceTile = this;
-            
-            vector<Tile*> legalMoves = piece->getLegalMoves();
+    if (board->isMyTurn) {
+        if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
+            if (piece != nullptr) {
+                if (piece->player == board->me) {
+                    board->game->pickedUpPiece = piece;
+                    board->game->pickedUpPieceTile = this;
+                    
+                    vector<Tile*> legalMoves = piece->getLegalMoves();
+                    for (int i = 0; i < legalMoves.size(); i++) {
+                        Tile* legalMove = legalMoves[i];
+                        legalMove->highlight();
+                    }
+                    board->game->pickedUpPieceTile->highlight();
+                }
+            }
+        } else { // move a piece mode
+            bool isALegalMove = false;
+            vector<Tile*> legalMoves = board->game->pickedUpPiece->getLegalMoves();
             for (int i = 0; i < legalMoves.size(); i++) {
                 Tile* legalMove = legalMoves[i];
-                legalMove->highlight();
+                if (legalMove->getX() == this->x && legalMove->getY() == this->y) {
+                    isALegalMove = true;
+                }
+                legalMove->resetHighlight();
             }
-            board->game->pickedUpPieceTile->highlight();
-        }
-    } else { // move a piece mode
-        bool isALegalMove = false;
-        vector<Tile*> legalMoves = board->game->pickedUpPiece->getLegalMoves();
-        for (int i = 0; i < legalMoves.size(); i++) {
-            Tile* legalMove = legalMoves[i];
-            if (legalMove->getX() == this->x && legalMove->getY() == this->y) {
-                isALegalMove = true;
+            board->game->pickedUpPieceTile->resetHighlight();
+            
+            if (isALegalMove) {
+                board->game->pickedUpPiece->moveTo(this);
+                board->isMyTurn = false;
+                // send move to server
+                
+                // temp while no server
+                board->isMyTurn = true;
             }
-            legalMove->resetHighlight();
+            
+            board->game->pickedUpPiece = nullptr;
+            board->game->pickedUpPieceTile = nullptr;
+            
         }
-        board->game->pickedUpPieceTile->resetHighlight();
-        
-        if (isALegalMove) {
-            board->game->pickedUpPiece->moveTo(this);
-        }
-        
-        board->game->pickedUpPiece = nullptr;
-        board->game->pickedUpPieceTile = nullptr;
-        
     }
 }
 

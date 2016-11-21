@@ -16,6 +16,15 @@ ChessBoard::ChessBoard(int scale, ChessGame* game) {
     this->whitePlayer = new Player(WHITE, this);
     this->blackPlayer = new Player(BLACK, this);
     
+    // get this from server when joining or creating game
+    this->me = whitePlayer;
+    
+    if (this->me->getSide() == WHITE) {
+        this->isMyTurn = true;
+    } else {
+        this->isMyTurn = false;
+    }
+    
     createTiles();
     createPieces();
 }
