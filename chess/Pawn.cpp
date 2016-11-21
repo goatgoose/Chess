@@ -22,17 +22,18 @@ vector<Tile*> Pawn::getLegalMoves() {
     }
     
     vector<Coordinate> moves;
-    moves.push_back(Coordinate(x, y));
-    moves.push_back(Coordinate(x, y + (1 * teamDirection)));
-    
-    if (!hasMoved) {
-        moves.push_back(Coordinate(x, y + (2 * teamDirection)));
+    if (board->getTile(Coordinate(x, y + (1 * teamDirection)))->piece == nullptr) {
+        moves.push_back(Coordinate(x, y + (1 * teamDirection)));
+        
+        if (!hasMoved) {
+            moves.push_back(Coordinate(x, y + (2 * teamDirection)));
+        }
     }
     
     vector<Tile*> legalMoves;
     for (int i = 0; i < moves.size(); i++) {
         Coordinate move = moves[i];
-        if (moveIsPossible(moves[i])) {
+        if (moveIsPossible(move)) {
             legalMoves.push_back(board->getTile(move));
         }
     }

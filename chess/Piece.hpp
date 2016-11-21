@@ -28,7 +28,7 @@ public:
     void update();
     virtual vector<Tile*> getLegalMoves() = 0;
     
-    bool moveIsPossible(Coordinate move);
+    virtual bool moveIsPossible(Coordinate move);
     
     Sprite* getSprite();
     Side getSide();

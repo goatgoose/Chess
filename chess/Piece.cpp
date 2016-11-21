@@ -44,7 +44,7 @@ void Piece::moveTo(Tile* tile) {
 }
 
 bool Piece::moveIsPossible(Coordinate move) {
-    Tile* tile = board->tiles[move.getX()][move.getY()];
+    Tile* tile = board->getTile(move);
     
     // check for out of bounds
     if (tile == nullptr) {
@@ -53,14 +53,9 @@ bool Piece::moveIsPossible(Coordinate move) {
     
     // does a piece exist
     if (tile->piece != nullptr) {
-        if (tile->getSide() == this->side) {
+        if (tile->piece->getSide() == this->side) {
             // if its on this team u cant move here
             return false;
-        } else {
-            // if its on this team make sure its this one
-            if (tile->getX() != move.getX() || tile->getY() != move.getY()) {
-                return false;
-            }
         }
     }
     
