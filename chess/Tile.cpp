@@ -20,11 +20,7 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     board->game->addClickable(this->clickable);
     
     rect = new RectangleShape();
-    if (side == WHITE) {
-        rect->setFillColor(Color(246, 246, 246));
-    } else {
-        rect->setFillColor(Color(75, 75, 75));
-    }
+    setColor();
     update();
 }
 
@@ -75,16 +71,27 @@ void Tile::clickEvent() {
     }
 }
 
+void Tile::setColor() {
+    // color theme:
+    // https://color.adobe.com/1944mustang-color-theme-4817/
+    
+    if (side == WHITE) {
+        rect->setFillColor(Color(126, 138, 161));
+    } else {
+        rect->setFillColor(Color(38, 50, 71));
+    }
+}
+
 void Tile::highlight() {
-    rect->setFillColor(Color(0, 255, 255));
+    if (side == WHITE) {
+        rect->setFillColor(Color(188, 144, 103));
+    } else {
+        rect->setFillColor(Color(145, 101, 60));
+    }
 }
 
 void Tile::resetHighlight() {
-    if (side == WHITE) {
-        rect->setFillColor(Color(246, 246, 246));
-    } else {
-        rect->setFillColor(Color(75, 75, 75));
-    }
+    setColor();
 }
 
 int Tile::getX() {

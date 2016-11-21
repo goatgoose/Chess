@@ -47,6 +47,8 @@ private:
     ChessBoard* board;
     
     Clickable* clickable;
+    
+    void setColor();
 };
 
 #endif /* Tile_hpp */
