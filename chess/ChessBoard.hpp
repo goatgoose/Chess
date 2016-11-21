@@ -15,6 +15,7 @@
 #include <Pawn.hpp>
 #include <Rook.hpp>
 #include <Knight.hpp>
+#include <Bishop.hpp>
 
 using namespace std;
 

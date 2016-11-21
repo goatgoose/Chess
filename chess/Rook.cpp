@@ -38,8 +38,8 @@ vector<Tile*> Rook::getLegalMoves() {
         }
     }
     
-    // moves below
-    for (int i = y + 1; i < 8; i++) {
+    // moves above
+    for (int i = y - 1; i >= 0; i--) {
         Tile* tile = board->getTile(Coordinate(x, i));
         if (moveIsPossible(tile)) {
             legalMoves.push_back(tile);
@@ -49,8 +49,8 @@ vector<Tile*> Rook::getLegalMoves() {
         }
     }
     
-    // moves above
-    for (int i = y - 1; i >= 0; i--) {
+    // moves below
+    for (int i = y + 1; i < 8; i++) {
         Tile* tile = board->getTile(Coordinate(x, i));
         if (moveIsPossible(tile)) {
             legalMoves.push_back(tile);
