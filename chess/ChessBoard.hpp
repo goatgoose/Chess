@@ -10,9 +10,10 @@
 #define ChessBoard_hpp
 
 #include <iostream>
-#include <Pawn.hpp>
-#include <Tile.hpp>
 #include <Player.hpp>
+#include <Tile.hpp>
+#include <Pawn.hpp>
+#include <Rook.hpp>
 
 using namespace std;
 

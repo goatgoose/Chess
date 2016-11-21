@@ -39,16 +39,16 @@ vector<Tile*> Pawn::getLegalMoves() {
     }
     
     Tile* diagonalLeft = board->getTile(Coordinate(x - 1, y + teamDirection));
-    if (diagonalLeft != nullptr) { // if the tile exists
+    if (moveIsPossible(diagonalLeft)) { // if the tile exists
         if (diagonalLeft->piece != nullptr) { // if the tile contains a piece
-            if (diagonalLeft->piece->getSide() != this->side) {
+            if (diagonalLeft->piece->getSide() != this->side) { // if it's an enemy
                 legalMoves.push_back(diagonalLeft);
             }
         }
     }
     
     Tile* diagonalRight = board->getTile(Coordinate(x + 1, y + teamDirection));
-    if (diagonalRight != nullptr) {
+    if (moveIsPossible(diagonalRight)) {
         if (diagonalRight->piece != nullptr) {
             if (diagonalRight->piece->getSide() != this->side) {
                 legalMoves.push_back(diagonalRight);

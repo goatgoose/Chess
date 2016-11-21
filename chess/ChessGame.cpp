@@ -11,6 +11,7 @@
 ChessGame::ChessGame() {
     this->window = new RenderWindow(VideoMode(1440, 900), "SFML window");
     this->pickedUpPiece = nullptr;
+    this->pickedUpPieceTile = nullptr;
 }
 
 void ChessGame::startGame() {

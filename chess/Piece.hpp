@@ -29,6 +29,7 @@ public:
     virtual vector<Tile*> getLegalMoves() = 0;
     
     virtual bool moveIsPossible(Coordinate move);
+    virtual bool moveIsPossible(Tile* tile);
     
     Sprite* getSprite();
     Side getSide();

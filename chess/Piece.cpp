@@ -40,6 +40,8 @@ void Piece::moveTo(Tile* tile) {
     this->y = tile->getY();
     tile->piece = this;
     
+    // capture enemy piece if it lands on it
+    
     update();
 }
 
@@ -62,6 +64,13 @@ bool Piece::moveIsPossible(Coordinate move) {
     // check if king will die
     
     return true;
+}
+
+bool Piece::moveIsPossible(Tile* tile) {
+    if (tile == nullptr) {
+        return false;
+    }
+    return moveIsPossible(Coordinate(tile->getX(), tile->getY()));
 }
 
 Sprite* Piece::getSprite() {

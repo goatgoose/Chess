@@ -48,6 +48,11 @@ void ChessBoard::createPieces() {
         tiles[x][1]->piece = new Pawn(x, 1, whitePlayer);
         tiles[x][6]->piece = new Pawn(x, 6, blackPlayer);
     }
+    
+    tiles[0][0]->piece = new Rook(0, 0, whitePlayer);
+    tiles[7][0]->piece = new Rook(7, 0, whitePlayer);
+    tiles[0][7]->piece = new Rook(0, 7, blackPlayer);
+    tiles[7][7]->piece = new Rook(7, 7, blackPlayer);
 }
 
 void ChessBoard::update() {

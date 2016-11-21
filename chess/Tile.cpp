@@ -43,14 +43,15 @@ void Tile::clickEvent() {
     cout << "click for: " << x << ", " << y << endl;
     if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
         if (piece != nullptr) {
-            cout << "u clicked on a piece ;)" << endl;
             board->game->pickedUpPiece = piece;
+            board->game->pickedUpPieceTile = this;
             
             vector<Tile*> legalMoves = piece->getLegalMoves();
             for (int i = 0; i < legalMoves.size(); i++) {
                 Tile* legalMove = legalMoves[i];
                 legalMove->highlight();
             }
+            board->game->pickedUpPieceTile->highlight();
         }
     } else { // move a piece mode
         bool isALegalMove = false;
@@ -62,12 +63,14 @@ void Tile::clickEvent() {
             }
             legalMove->resetHighlight();
         }
+        board->game->pickedUpPieceTile->resetHighlight();
         
         if (isALegalMove) {
             board->game->pickedUpPiece->moveTo(this);
         }
         
         board->game->pickedUpPiece = nullptr;
+        board->game->pickedUpPieceTile = nullptr;
         
     }
 }

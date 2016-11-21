@@ -26,6 +26,7 @@ public:
     RenderWindow* window;
     
     Piece* pickedUpPiece;
+    Tile* pickedUpPieceTile;
     
     void addClickable(Clickable* clickable);
     void removeClickable(string id);
