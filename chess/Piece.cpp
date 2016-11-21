@@ -19,6 +19,7 @@ Piece::Piece(int x, int y, Player* player, string textureName) {
     
     texture = new Texture();
     texture->loadFromFile(resourcePath() + textureName + "-" + player->getSideString() + ".png");
+    cout << texture << endl;
     sprite = new Sprite(*texture);
     
     update();

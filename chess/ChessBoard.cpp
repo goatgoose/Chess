@@ -63,6 +63,9 @@ void ChessBoard::createPieces() {
     tiles[5][0]->piece = new Bishop(5, 0, whitePlayer);
     tiles[2][7]->piece = new Bishop(2, 7, blackPlayer);
     tiles[5][7]->piece = new Bishop(5, 7, blackPlayer);
+    
+    tiles[3][0]->piece = new Queen(3, 0, whitePlayer);
+    tiles[3][7]->piece = new Queen(3, 7, blackPlayer);
 }
 
 void ChessBoard::update() {

@@ -16,6 +16,8 @@ Clickable::Clickable(int x1, int y1, int x2, int y2, string id, function<void()>
     this->y2 = y2;
     this->id = id;
     this->clickAction = clickAction;
+    
+    // make classes extend this so tile is a clickable
 }
 
 Clickable::Clickable(function<void()> clickAction, string id) {
