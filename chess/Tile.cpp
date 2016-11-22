@@ -15,9 +15,7 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     this->y = y;
     this->board = board;
     this->side = side;
-    
-    this->clickable = new Clickable([&]{ this->clickEvent(); }, "tile:" + to_string(x) + "," + to_string(y));
-    board->game->addClickable(this->clickable);
+    this->scale = board->getOffset();
     
     rect = new RectangleShape();
     setColor();
@@ -25,14 +23,8 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
 }
 
 void Tile::update() {
-    int scale = board->getOffset();
     rect->setSize(Vector2f(scale, scale));
     rect->setPosition(Vector2f(scale * x, scale * y));
-    
-    clickable->x1 = scale * x;
-    clickable->y1 = scale * y;
-    clickable->x2 = clickable->x1 + scale;
-    clickable->y2 = clickable->y1 + scale;
 }
 
 void Tile::clickEvent() {
@@ -71,6 +63,11 @@ void Tile::clickEvent() {
                 
                 // temp while no server
                 board->isMyTurn = true;
+                if (board->me == board->blackPlayer) {
+                    board->me = board->whitePlayer;
+                } else {
+                    board->me = board->blackPlayer;
+                }
             }
             
             board->game->pickedUpPiece = nullptr;
@@ -101,6 +98,22 @@ void Tile::highlight() {
 
 void Tile::resetHighlight() {
     setColor();
+}
+
+int Tile::getX1() {
+    return scale * x;
+}
+
+int Tile::getY1() {
+    return scale * y;
+}
+
+int Tile::getX2() {
+    return getX1() + scale;
+}
+
+int Tile::getY2() {
+    return getY1() + scale;
 }
 
 int Tile::getX() {

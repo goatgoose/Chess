@@ -21,9 +21,9 @@ using namespace sf;
 class ChessBoard;
 class Piece;
 
-class Tile {
+class Tile: public Clickable {
 public:
-    Tile(int x, int y, Side color, ChessBoard* board); // pass player
+    Tile(int x, int y, Side color, ChessBoard* board); // pass player?
     ~Tile();
     
     Piece* piece;
@@ -38,15 +38,19 @@ public:
     int getY();
     Side getSide();
     
-    void clickEvent();
+    virtual void clickEvent() override;
+    
+    virtual int getX1() override;
+    virtual int getY1() override;
+    virtual int getX2() override;
+    virtual int getY2() override;
     
 private:
     int x;
     int y;
+    int scale;
     Side side;
     ChessBoard* board;
-    
-    Clickable* clickable;
     
     void setColor();
 };

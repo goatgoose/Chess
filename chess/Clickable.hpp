@@ -15,20 +15,15 @@ using namespace std;
 
 class Clickable {
 public:
-    Clickable(int x1, int y1, int x2, int y2, string id, function<void()> clickAction);
-    Clickable(function<void()> clickAction, string id);
+    Clickable();
+    ~Clickable();
     
-    void callback();
+    virtual int getX1() = 0;
+    virtual int getY1() = 0;
+    virtual int getX2() = 0;
+    virtual int getY2() = 0;
     
-    int x1;
-    int y1;
-    int x2;
-    int y2;
-    
-    string getId();
-private:
-    string id;
-    function<void()> clickAction;
+    virtual void clickEvent() = 0;
 };
 
 #endif /* Clickable_hpp */

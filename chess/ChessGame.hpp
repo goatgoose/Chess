@@ -28,11 +28,11 @@ public:
     Piece* pickedUpPiece;
     Tile* pickedUpPieceTile;
     
-    void addClickable(Clickable* clickable);
-    void removeClickable(string id);
+    static void addClickable(Clickable* clickable);
+    static void removeClickable(Clickable* clickable);
     
 private:
-    vector<Clickable*> clickables;
+    static vector<Clickable*> clickables;
     
     RectangleShape* background;
 };

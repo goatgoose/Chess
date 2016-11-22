@@ -30,11 +30,11 @@
 		254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049A1DE0F4C9002AFD3C /* Rook.cpp */; };
 		254F049F1DE20F06002AFD3C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049D1DE20F06002AFD3C /* Player.cpp */; };
 		254F04A21DE22321002AFD3C /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A01DE22321002AFD3C /* Coordinate.cpp */; };
-		254F04A51DE2495C002AFD3C /* Clickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A31DE2495C002AFD3C /* Clickable.cpp */; };
 		254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A61DE2BE51002AFD3C /* Knight.cpp */; };
 		254F04AB1DE2C507002AFD3C /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A91DE2C507002AFD3C /* Bishop.cpp */; };
 		254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AC1DE33D56002AFD3C /* Queen.cpp */; };
 		254F04B11DE341B4002AFD3C /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AF1DE341B4002AFD3C /* King.cpp */; };
+		255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C31DE4A0F800FC162E /* Clickable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,7 +72,6 @@
 		254F049E1DE20F06002AFD3C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		254F04A01DE22321002AFD3C /* Coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coordinate.cpp; sourceTree = "<group>"; };
 		254F04A11DE22321002AFD3C /* Coordinate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Coordinate.hpp; sourceTree = "<group>"; };
-		254F04A31DE2495C002AFD3C /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clickable.cpp; sourceTree = "<group>"; };
 		254F04A41DE2495C002AFD3C /* Clickable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clickable.hpp; sourceTree = "<group>"; };
 		254F04A61DE2BE51002AFD3C /* Knight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
 		254F04A71DE2BE51002AFD3C /* Knight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Knight.hpp; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		254F04AD1DE33D56002AFD3C /* Queen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queen.hpp; sourceTree = "<group>"; };
 		254F04AF1DE341B4002AFD3C /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		254F04B01DE341B4002AFD3C /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
+		255751C31DE4A0F800FC162E /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clickable.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
 				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
 				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
-				254F04A31DE2495C002AFD3C /* Clickable.cpp */,
+				255751C31DE4A0F800FC162E /* Clickable.cpp */,
 				254F045F1DE02CD1002AFD3C /* main.cpp */,
 				254F04731DE0AB9D002AFD3C /* ChessGame.hpp */,
 				254F04721DE0AB9D002AFD3C /* ChessGame.cpp */,
@@ -295,7 +295,7 @@
 				254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */,
 				254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */,
 				254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */,
-				254F04A51DE2495C002AFD3C /* Clickable.cpp in Sources */,
+				255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */,
 				254F04AB1DE2C507002AFD3C /* Bishop.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +428,7 @@
 				254F046E1DE02CD1002AFD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
