@@ -10,7 +10,7 @@
 #include "ChessBoard.hpp"
 
 Queen::Queen(int x, int y, Player* player): Piece(x, y, player, "queen") {
-    cout << "test" << endl;
+    
 }
 
 vector<Tile*> Queen::getLegalMoves() {

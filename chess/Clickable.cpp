@@ -16,3 +16,11 @@ Clickable::Clickable() {
 Clickable::~Clickable() {
     ChessGame::removeClickable(this);
 }
+
+void Clickable::pressEvent() {
+    
+}
+
+void Clickable::releaseEvent() {
+    
+}

@@ -14,6 +14,7 @@
 #include <iostream>
 #include <ChessBoard.hpp>
 #include <Clickable.hpp>
+#include <Button.hpp>
 
 using namespace std;
 using namespace sf;
@@ -31,8 +32,12 @@ public:
     static void addClickable(Clickable* clickable);
     static void removeClickable(Clickable* clickable);
     
+    static void addDrawable(Drawable* drawable);
+    static void removeDrawable(Drawable* drawable);
+    
 private:
     static vector<Clickable*> clickables;
+    static vector<Drawable*> drawables;
     
     RectangleShape* background;
 };

@@ -9,6 +9,7 @@
 #include "ChessGame.hpp"
 
 vector<Clickable*> ChessGame::clickables = vector<Clickable*>();
+vector<Drawable*> ChessGame::drawables = vector<Drawable*>();
 
 ChessGame::ChessGame() {
     this->window = new RenderWindow(VideoMode(1440, 900), "SFML window");
@@ -27,6 +28,9 @@ void ChessGame::startGame() {
     background->setSize(Vector2f(1440, 900));
     background->setPosition(Vector2f(0, 0));
     background->setFillColor(Color(38, 50, 71));
+    addDrawable(background);
+    
+    //Button testButton(1000, 100, 50, 20, [&]{cout << "clicky clicky" << endl;});
     
     ChessBoard board(900, this);
     
@@ -54,25 +58,30 @@ void ChessGame::startGame() {
                         event.mouseButton.y > clickable->getY1() &&
                         event.mouseButton.y < clickable->getY2()) {
                         
-                        clickable->clickEvent();
+                        clickable->releaseEvent();
+                        break;
+                    }
+                }
+            } else if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
+                
+                for (int i = 0; i < clickables.size(); i++) {
+                    Clickable* clickable = clickables[i];
+                    if (event.mouseButton.x > clickable->getX1() &&
+                        event.mouseButton.x < clickable->getX2() &&
+                        event.mouseButton.y > clickable->getY1() &&
+                        event.mouseButton.y < clickable->getY2()) {
+                        
+                        clickable->pressEvent();
                         break;
                     }
                 }
             }
-            
         }
         
         window->clear();
         
-        window->draw(*background);
-        
-        for (int x = 0; x < 8; x++) {
-            for (int y = 0; y < 8; y++) {
-                window->draw(*board.tiles[x][y]->rect);
-                if (board.tiles[x][y]->piece != nullptr) {
-                    window->draw(*board.tiles[x][y]->piece->getSprite());
-                }
-            }
+        for (int i = 0; i < drawables.size(); i++) {
+            window->draw(*drawables[i]);
         }
         
         window->display();
@@ -93,6 +102,19 @@ void ChessGame::removeClickable(Clickable* clickable) {
     clickables = newClickables;
 }
 
+void ChessGame::addDrawable(Drawable* drawable) {
+    drawables.push_back(drawable);
+}
+
+void ChessGame::removeDrawable(Drawable* drawable) {
+    vector<Drawable*> newDrawables;
+    for (int i = 0; i < drawables.size(); i++) {
+        if (drawables[i] != drawable) {
+            newDrawables.push_back(drawables[i]);
+        }
+    }
+    drawables = newDrawables;
+}
 
 
 

@@ -38,7 +38,7 @@ public:
     int getY();
     Side getSide();
     
-    virtual void clickEvent() override;
+    virtual void releaseEvent() override;
     
     virtual int getX1() override;
     virtual int getY1() override;

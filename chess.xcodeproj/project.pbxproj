@@ -35,6 +35,8 @@
 		254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AC1DE33D56002AFD3C /* Queen.cpp */; };
 		254F04B11DE341B4002AFD3C /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AF1DE341B4002AFD3C /* King.cpp */; };
 		255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C31DE4A0F800FC162E /* Clickable.cpp */; };
+		255751C71DE4D6D200FC162E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C51DE4D6D200FC162E /* Button.cpp */; };
+		25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,9 @@
 		254F04AF1DE341B4002AFD3C /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		254F04B01DE341B4002AFD3C /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
 		255751C31DE4A0F800FC162E /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clickable.cpp; sourceTree = "<group>"; };
+		255751C51DE4D6D200FC162E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		255751C61DE4D6D200FC162E /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GlacialIndifference-Regular.otf"; path = "resources/GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +125,11 @@
 				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
 				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
 				255751C31DE4A0F800FC162E /* Clickable.cpp */,
-				254F045F1DE02CD1002AFD3C /* main.cpp */,
+				255751C61DE4D6D200FC162E /* Button.hpp */,
+				255751C51DE4D6D200FC162E /* Button.cpp */,
 				254F04731DE0AB9D002AFD3C /* ChessGame.hpp */,
 				254F04721DE0AB9D002AFD3C /* ChessGame.cpp */,
+				254F045F1DE02CD1002AFD3C /* main.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
 				254F049E1DE20F06002AFD3C /* Player.hpp */,
@@ -149,6 +156,7 @@
 		254F04611DE02CD1002AFD3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */,
 				254F04821DE0D9E6002AFD3C /* bishop-black.png */,
 				254F04831DE0D9E6002AFD3C /* bishop-white.png */,
 				254F04841DE0D9E6002AFD3C /* king-black.png */,
@@ -255,6 +263,7 @@
 				254F048F1DE0D9E6002AFD3C /* bishop-white.png in Resources */,
 				254F04931DE0D9E6002AFD3C /* knight-white.png in Resources */,
 				254F04961DE0D9E6002AFD3C /* queen-black.png in Resources */,
+				25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */,
 				254F04911DE0D9E6002AFD3C /* king-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +298,7 @@
 				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
 				254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */,
 				254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */,
+				255751C71DE4D6D200FC162E /* Button.cpp in Sources */,
 				254F04741DE0AB9D002AFD3C /* ChessGame.cpp in Sources */,
 				254F04A21DE22321002AFD3C /* Coordinate.cpp in Sources */,
 				254F04B11DE341B4002AFD3C /* King.cpp in Sources */,

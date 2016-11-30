@@ -23,7 +23,8 @@ public:
     virtual int getX2() = 0;
     virtual int getY2() = 0;
     
-    virtual void clickEvent() = 0;
+    virtual void pressEvent();
+    virtual void releaseEvent();
 };
 
 #endif /* Clickable_hpp */

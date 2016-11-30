@@ -19,6 +19,7 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     
     rect = new RectangleShape();
     setColor();
+    ChessGame::addDrawable(rect);
     update();
 }
 
@@ -27,7 +28,7 @@ void Tile::update() {
     rect->setPosition(Vector2f(scale * x, scale * y));
 }
 
-void Tile::clickEvent() {
+void Tile::releaseEvent() {
     cout << "click for: " << x << ", " << y << endl;
     if (board->isMyTurn) {
         if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
