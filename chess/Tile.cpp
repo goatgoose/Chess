@@ -15,7 +15,6 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     this->y = y;
     this->board = board;
     this->side = side;
-    this->scale = board->getOffset();
     
     rect = new RectangleShape();
     setColor();
@@ -24,6 +23,7 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
 }
 
 void Tile::update() {
+    int scale = board->getOffset();
     rect->setSize(Vector2f(scale, scale));
     rect->setPosition(Vector2f(scale * x, scale * y));
 }
@@ -102,19 +102,20 @@ void Tile::resetHighlight() {
 }
 
 int Tile::getX1() {
-    return scale * x;
+    
+    return board->getOffset() * x;
 }
 
 int Tile::getY1() {
-    return scale * y;
+    return board->getOffset() * y;
 }
 
 int Tile::getX2() {
-    return getX1() + scale;
+    return getX1() + board->getOffset();
 }
 
 int Tile::getY2() {
-    return getY1() + scale;
+    return getY1() + board->getOffset();
 }
 
 int Tile::getX() {

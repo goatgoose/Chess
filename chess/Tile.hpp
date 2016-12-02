@@ -48,7 +48,6 @@ public:
 private:
     int x;
     int y;
-    int scale;
     Side side;
     ChessBoard* board;
     
