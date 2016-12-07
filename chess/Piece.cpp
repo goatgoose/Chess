@@ -21,7 +21,7 @@ Piece::Piece(int x, int y, Player* player, string textureName) {
     texture = new Texture();
     texture->loadFromFile(resourcePath() + textureName + "-" + player->getSideString() + ".png");
     sprite = new Sprite(*texture);
-    ChessGame::addDrawable(sprite);
+    player->board->game->addDrawable(sprite);
     
     update();
 }

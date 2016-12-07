@@ -12,12 +12,13 @@
 #include <Clickable.hpp>
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
+#include <ChessWindow.hpp>
 
 using namespace sf;
 
 class Button: public Clickable {
 public:
-    Button(int x, int y, int width, int height, function<void()> clickAction);
+    Button(int x, int y, int width, int height, ChessWindow* window, function<void()> clickAction);
     ~Button();
     
     virtual int getX1() override;

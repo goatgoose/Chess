@@ -2,44 +2,29 @@
 //  ChessGame.hpp
 //  chess
 //
-//  Created by Sam Clark on 11/19/16.
+//  Created by Sam Clark on 12/2/16.
 //  Copyright © 2016 Sam Clark. All rights reserved.
 //
 
 #ifndef ChessGame_hpp
 #define ChessGame_hpp
 
-#include <SFML/Graphics.hpp>
-#include "ResourcePath.hpp"
-#include <iostream>
+#include <ChessWindow.hpp>
 #include <ChessBoard.hpp>
-#include <Clickable.hpp>
-#include <Button.hpp>
+#include <Piece.hpp>
+#include <Tile.hpp>
 
-using namespace std;
-using namespace sf;
-
-class ChessGame {
+class ChessGame: public ChessWindow {
 public:
-    ChessGame();
-    
-    void startGame();
-    RenderWindow* window;
+    ChessGame(int scale);
     
     Piece* pickedUpPiece;
     Tile* pickedUpPieceTile;
     
-    static void addClickable(Clickable* clickable);
-    static void removeClickable(Clickable* clickable);
-    
-    static void addDrawable(Drawable* drawable);
-    static void removeDrawable(Drawable* drawable);
-    
 private:
-    static vector<Clickable*> clickables;
-    static vector<Drawable*> drawables;
+    ChessBoard* board;
     
-    RectangleShape* background;
+    virtual void resizeEvent(Event event) override;
 };
 
 #endif /* ChessGame_hpp */

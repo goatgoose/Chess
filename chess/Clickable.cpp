@@ -7,14 +7,15 @@
 //
 
 #include "Clickable.hpp"
-#include "ChessGame.hpp"
+#include "ChessWindow.hpp"
 
-Clickable::Clickable() {
-    ChessGame::addClickable(this);
+Clickable::Clickable(ChessWindow* window) {
+    this->window = window;
+    this->window->addClickable(this);
 }
 
 Clickable::~Clickable() {
-    ChessGame::removeClickable(this);
+    this->window->removeClickable(this);
 }
 
 void Clickable::pressEvent() {

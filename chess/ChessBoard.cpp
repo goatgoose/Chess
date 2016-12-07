@@ -97,6 +97,7 @@ void ChessBoard::setScale(int scale) {
 }
 
 int ChessBoard::getOffset() {
+    cout << this->scale / 8 << endl;
     return this->scale / 8;
 }
 

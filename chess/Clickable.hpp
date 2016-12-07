@@ -9,13 +9,11 @@
 #ifndef Clickable_hpp
 #define Clickable_hpp
 
-#import <iostream>
-
-using namespace std;
+class ChessWindow;
 
 class Clickable {
 public:
-    Clickable();
+    Clickable(ChessWindow* window);
     ~Clickable();
     
     virtual int getX1() = 0;
@@ -25,6 +23,9 @@ public:
     
     virtual void pressEvent();
     virtual void releaseEvent();
+    
+private:
+    ChessWindow* window;
 };
 
 #endif /* Clickable_hpp */

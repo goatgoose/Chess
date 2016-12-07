@@ -10,6 +10,7 @@
 #define ChessBoard_hpp
 
 #include <iostream>
+#include <ChessWindow.hpp>
 #include <Player.hpp>
 #include <Tile.hpp>
 #include <Pawn.hpp>

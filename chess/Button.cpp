@@ -9,7 +9,7 @@
 #include "Button.hpp"
 #include "ChessGame.hpp"
 
-Button::Button(int x, int y, int width, int height, function<void()> clickAction) {
+Button::Button(int x, int y, int width, int height, ChessWindow* window, function<void()> clickAction): Clickable(window) {
     this->x = x;
     this->y = y;
     this->width = width;
@@ -20,13 +20,13 @@ Button::Button(int x, int y, int width, int height, function<void()> clickAction
     rect->setPosition(Vector2f(x, y));
     rect->setSize(Vector2f(width, height));
     rect->setFillColor(Color(253, 151, 39));
-    ChessGame::addDrawable(rect);
+    window->addDrawable(rect);
     
     Font font;
     font.loadFromFile(resourcePath() + "GlacialIndifference-Regular.otf");
     this->text = new Text("test", font, 14);
     this->text->setPosition(x, y);
-    ChessGame::addDrawable(text);
+    window->addDrawable(text);
 }
 
 void Button::setLabel(string label) {

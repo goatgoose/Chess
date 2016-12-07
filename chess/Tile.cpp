@@ -10,7 +10,7 @@
 #include "ChessBoard.hpp"
 #include "ChessGame.hpp"
 
-Tile::Tile(int x, int y, Side side, ChessBoard* board) {
+Tile::Tile(int x, int y, Side side, ChessBoard* board): Clickable(board->game) {
     this->x = x;
     this->y = y;
     this->board = board;
@@ -18,7 +18,7 @@ Tile::Tile(int x, int y, Side side, ChessBoard* board) {
     
     rect = new RectangleShape();
     setColor();
-    ChessGame::addDrawable(rect);
+    this->board->game->addDrawable(rect);
     update();
 }
 

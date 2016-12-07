@@ -37,8 +37,8 @@ using namespace std;
 
 int main(int, char const**) {
     
-    ChessGame game;
-    game.startGame();
+    ChessGame chessGame(900);
+    chessGame.launch();
     
     return EXIT_SUCCESS;
 }
