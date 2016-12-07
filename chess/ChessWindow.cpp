@@ -11,6 +11,9 @@
 ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
     this->renderWindow = new RenderWindow(VideoMode(1440, 900), "SFML window");
     
+    this->clickables = vector<Clickable*>();
+    this->drawables = vector<Drawable*>();
+    
     background = new RectangleShape();
     background->setSize(Vector2f(1440, 900));
     background->setPosition(Vector2f(0, 0));
@@ -30,8 +33,8 @@ void ChessWindow::launch() {
                 // http://stackoverflow.com/questions/27785940/shapes-proportionally-resize-with-window-in-sfml-2-x
                 renderWindow->setView(sf::View(sf::FloatRect(0, 0, event.size.width, event.size.height)));
                 
-                board.setScale(event.size.height);
                 background->setSize(Vector2f(event.size.width, event.size.height));
+                this->resizeEvent(event);
                 
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                 //cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
@@ -63,13 +66,13 @@ void ChessWindow::launch() {
             }
         }
         
-        window->clear();
+        renderWindow->clear();
         
         for (int i = 0; i < drawables.size(); i++) {
-            window->draw(*drawables[i]);
+            renderWindow->draw(*drawables[i]);
         }
         
-        window->display();
+        renderWindow->display();
     }
 }
 
