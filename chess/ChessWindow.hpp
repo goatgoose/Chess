@@ -37,6 +37,9 @@ private:
     
     RectangleShape* background;
     
+    Clickable* lastClicked;
+    Clickable* lastHovered;
+    
     virtual void resizeEvent(Event event) = 0;
 };
 

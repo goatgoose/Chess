@@ -16,6 +16,8 @@ public:
     Clickable(ChessWindow* window);
     ~Clickable();
     
+    bool isInBounds(int x, int y);
+    
     virtual int getX1() = 0;
     virtual int getY1() = 0;
     virtual int getX2() = 0;
@@ -23,6 +25,9 @@ public:
     
     virtual void pressEvent();
     virtual void releaseEvent();
+    
+    virtual void hoverEvent();
+    virtual void unhoverEvent();
     
 private:
     ChessWindow* window;

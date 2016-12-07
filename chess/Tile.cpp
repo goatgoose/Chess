@@ -29,7 +29,6 @@ void Tile::update() {
 }
 
 void Tile::releaseEvent() {
-    cout << "click for: " << x << ", " << y << endl;
     if (board->isMyTurn) {
         if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
             if (piece != nullptr) {

@@ -14,6 +14,9 @@ ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
     this->clickables = vector<Clickable*>();
     this->drawables = vector<Drawable*>();
     
+    this->lastClicked = nullptr;
+    this->lastHovered = nullptr;
+    
     background = new RectangleShape();
     background->setSize(Vector2f(1440, 900));
     background->setPosition(Vector2f(0, 0));
@@ -39,28 +42,35 @@ void ChessWindow::launch() {
             } else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left) {
                 //cout << event.mouseButton.x << ", " << event.mouseButton.y << endl;
                 
-                for (int i = 0; i < clickables.size(); i++) {
-                    Clickable* clickable = clickables[i];
-                    if (event.mouseButton.x > clickable->getX1() &&
-                        event.mouseButton.x < clickable->getX2() &&
-                        event.mouseButton.y > clickable->getY1() &&
-                        event.mouseButton.y < clickable->getY2()) {
-                        
-                        clickable->releaseEvent();
-                        break;
-                    }
+                if (this->lastClicked != nullptr) {
+                    lastClicked->releaseEvent();
+                    this->lastClicked = nullptr;
                 }
             } else if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
                 
                 for (int i = 0; i < clickables.size(); i++) {
                     Clickable* clickable = clickables[i];
-                    if (event.mouseButton.x > clickable->getX1() &&
-                        event.mouseButton.x < clickable->getX2() &&
-                        event.mouseButton.y > clickable->getY1() &&
-                        event.mouseButton.y < clickable->getY2()) {
-                        
+                    if (clickable->isInBounds(event.mouseButton.x, event.mouseButton.y)) {
                         clickable->pressEvent();
+                        this->lastClicked = clickable;
                         break;
+                    }
+                }
+            } else if (event.type == Event::MouseMoved) {
+                
+                if (this->lastHovered != nullptr) {
+                    if (!this->lastHovered->isInBounds(event.mouseButton.x, event.mouseButton.y)) {
+                        this->lastHovered->unhoverEvent();
+                        this->lastHovered = nullptr;
+                    }
+                } else {
+                    for (int i = 0; i < clickables.size(); i++) {
+                        Clickable* clickable = clickables[i];
+                        if (clickable->isInBounds(event.mouseButton.x, event.mouseButton.y)) {
+                            clickable->hoverEvent();
+                            this->lastHovered = clickable;
+                            break;
+                        }
                     }
                 }
             }
