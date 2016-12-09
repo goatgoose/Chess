@@ -13,12 +13,13 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <ChessWindow.hpp>
+#include <math.h>
 
 using namespace sf;
 
 class Button: public Clickable {
 public:
-    Button(int x, int y, int width, int height, ChessWindow* window, function<void()> clickAction);
+    Button(float xPercent, float yPercent, int width, int height, ChessWindow* window, function<void()> clickAction);
     ~Button();
     
     virtual int getX1() override;
@@ -33,11 +34,16 @@ public:
     
     void setLabel(string label);
     void setColor(Color color);
+    
+    void update();
 private:
+    float xPercent;
+    float yPercent;
     int x;
     int y;
     int width;
     int height;
+    ChessWindow* window;
     function<void()> clickAction;
     
     Color color;

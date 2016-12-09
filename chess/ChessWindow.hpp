@@ -29,8 +29,9 @@ public:
     void addDrawable(Drawable* drawable);
     void removeDrawable(Drawable* drawable);
     
-private:
     RenderWindow* renderWindow;
+    
+private:
     
     vector<Clickable*> clickables;
     vector<sf::Drawable*> drawables;
