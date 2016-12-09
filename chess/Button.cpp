@@ -35,11 +35,13 @@ void Button::setLabel(string label) {
 }
 
 void Button::setColor(Color color) {
+    this->color = color;
     rect->setFillColor(color);
 }
 
 void Button::pressEvent() {
     cout << "press" << endl;
+    
 }
 
 void Button::releaseEvent() {
