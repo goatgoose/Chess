@@ -26,6 +26,8 @@ private:
     ChessBoard* board;
     
     virtual void resizeEvent(Event event) override;
+    
+    Button* testButton;
 };
 
 #endif /* ChessGame_hpp */
