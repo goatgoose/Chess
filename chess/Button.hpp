@@ -28,6 +28,8 @@ public:
     
     virtual void pressEvent() override;
     virtual void releaseEvent() override;
+    virtual void hoverEvent() override;
+    virtual void unhoverEvent() override;
     
     void setLabel(string label);
     void setColor(Color color);
@@ -37,6 +39,8 @@ private:
     int width;
     int height;
     function<void()> clickAction;
+    
+    Color color;
     
     RectangleShape* rect;
     Text* text;

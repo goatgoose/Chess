@@ -7,7 +7,6 @@
 //
 
 #include "Button.hpp"
-#include "ChessGame.hpp"
 
 Button::Button(int x, int y, int width, int height, ChessWindow* window, function<void()> clickAction): Clickable(window) {
     this->x = x;
@@ -16,17 +15,19 @@ Button::Button(int x, int y, int width, int height, ChessWindow* window, functio
     this->height = height;
     this->clickAction = clickAction;
     
+    this->color = Color(50, 50, 50);
+    
     this->rect = new RectangleShape();
-    rect->setPosition(Vector2f(x, y));
     rect->setSize(Vector2f(width, height));
-    rect->setFillColor(Color(253, 151, 39));
+    rect->setPosition(Vector2f(x, y));
+    rect->setFillColor(color);
     window->addDrawable(rect);
     
     Font font;
     font.loadFromFile(resourcePath() + "GlacialIndifference-Regular.otf");
     this->text = new Text("test", font, 14);
     this->text->setPosition(x, y);
-    window->addDrawable(text);
+    //window->addDrawable(text);
 }
 
 void Button::setLabel(string label) {
@@ -43,6 +44,14 @@ void Button::pressEvent() {
 
 void Button::releaseEvent() {
     clickAction();
+}
+
+void Button::hoverEvent() {
+    
+}
+
+void Button::unhoverEvent() {
+    
 }
 
 int Button::getX1() {

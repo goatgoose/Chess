@@ -13,6 +13,7 @@
 #include <ChessBoard.hpp>
 #include <Piece.hpp>
 #include <Tile.hpp>
+#include <Button.hpp>
 
 class ChessGame: public ChessWindow {
 public:

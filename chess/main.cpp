@@ -17,9 +17,12 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <ChessGame.hpp>
+#include <Button.hpp>
 
 // TODO
 // button class
+//   make scalable
+//   positioned in percents
 // multiplayer server
 //   matchmaking / elo system ?
 // moves log (new window?)
@@ -37,8 +40,8 @@ using namespace std;
 
 int main(int, char const**) {
     
-    ChessGame chessGame(900);
-    chessGame.launch();
+    ChessGame* chessGame = new ChessGame(900);
+    chessGame->launch();
     
     return EXIT_SUCCESS;
 }
