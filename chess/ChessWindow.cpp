@@ -59,14 +59,14 @@ void ChessWindow::launch() {
             } else if (event.type == Event::MouseMoved) {
                 
                 if (this->lastHovered != nullptr) {
-                    if (!this->lastHovered->isInBounds(event.mouseButton.x, event.mouseButton.y)) {
+                    if (!this->lastHovered->isInBounds(event.mouseMove.x, event.mouseMove.y)) {
                         this->lastHovered->unhoverEvent();
                         this->lastHovered = nullptr;
                     }
                 } else {
                     for (int i = 0; i < clickables.size(); i++) {
                         Clickable* clickable = clickables[i];
-                        if (clickable->isInBounds(event.mouseButton.x, event.mouseButton.y)) {
+                        if (clickable->isInBounds(event.mouseMove.x, event.mouseMove.y)) {
                             clickable->hoverEvent();
                             this->lastHovered = clickable;
                             break;

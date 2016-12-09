@@ -39,7 +39,7 @@ void Button::setColor(Color color) {
 }
 
 void Button::pressEvent() {
-    
+    cout << "press" << endl;
 }
 
 void Button::releaseEvent() {
@@ -47,11 +47,11 @@ void Button::releaseEvent() {
 }
 
 void Button::hoverEvent() {
-    
+    cout << "hover" << endl;
 }
 
 void Button::unhoverEvent() {
-    
+    cout << "unhover" << endl;
 }
 
 int Button::getX1() {
