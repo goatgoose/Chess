@@ -18,12 +18,16 @@
 
 class ChessGame: public ChessWindow {
 public:
-    ChessGame(int scale);
+    ChessGame(int scale, string name);
     
     Piece* pickedUpPiece;
     Tile* pickedUpPieceTile;
     
+    string getName();
+    
 private:
+    string name;
+    
     ChessBoard* board;
     
     virtual void resizeEvent(Event event) override;
