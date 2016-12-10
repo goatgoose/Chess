@@ -11,7 +11,7 @@
 MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81)) {
     
     
-    localButton = new Button(0.5, 0.4, 0.4, 0.275, this, [&] {
+    localButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
         this->renderWindow->close();
         ChessGame* chessGame = new ChessGame(720);
         chessGame->launch();
@@ -19,10 +19,14 @@ MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81)) {
     });
     localButton->setColor(Color(96, 108, 131));
     
-    multiplayerButton = new Button(0.5, 0.6, 0.4, 0.275, this, [&] {cout << "MultiPlayer" << endl;});
+    multiplayerButton = new Button(0.25, 0.6, 0.5, 0.15, this, [&] {
+        this->renderWindow->close();
+        MultiplayerWindow* multiplayerWindow = new MultiplayerWindow();
+        multiplayerWindow->launch();
+    
+    });
     multiplayerButton->setColor(Color(96, 108, 131));
 
-    
 };
 
 void MainWindow::resizeEvent(Event event) {}

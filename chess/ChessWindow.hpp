@@ -25,7 +25,7 @@ public:
     
     void addClickable(Clickable* clickable);
     void removeClickable(Clickable* clickable);
-    
+    void draw(Text);
     void addDrawable(Drawable* drawable);
     void removeDrawable(Drawable* drawable);
     
