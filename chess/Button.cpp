@@ -19,7 +19,6 @@ Button::Button(float xPercent, float yPercent, float widthPercent, float heightP
     this->color = Color(50, 50, 50);
     
     this->rect = new RectangleShape();
-    rect->setSize(Vector2f(widthPercent, heightPercent));
     rect->setFillColor(color);
     update();
     window->addDrawable(rect);
@@ -36,8 +35,10 @@ void Button::update() {
     this->y = round(this->window->renderWindow->getSize().y * yPercent);
     this->width = round(this->window->renderWindow->getSize().x * widthPercent);
     this->height = round(this->window->renderWindow->getSize().y * heightPercent);
+    
+    cout << "x: " << x << ", width: " << width << endl;
     rect->setPosition(Vector2f(x, y));
-    rect->setScale(Vector2f(width, height));
+    rect->setSize(Vector2f(width, height));
 }
 
 void Button::setLabel(string label) {

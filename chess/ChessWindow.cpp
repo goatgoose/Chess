@@ -57,6 +57,7 @@ void ChessWindow::launch() {
                     }
                 }
             } else if (event.type == Event::MouseMoved) {
+                //cout << event.mouseMove.x << ", " << event.mouseMove.y << endl;
                 
                 if (this->lastHovered != nullptr) {
                     if (!this->lastHovered->isInBounds(event.mouseMove.x, event.mouseMove.y)) {
