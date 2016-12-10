@@ -29,7 +29,7 @@ using namespace std;
 int main(int, char const**) {
     
     MainWindow* mainWindow = new MainWindow();
-       mainWindow->launch();
+    mainWindow->launch();
     
     
     

@@ -13,7 +13,7 @@ MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81)) {
     
     localButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
         this->renderWindow->close();
-        ChessGame* chessGame = new ChessGame(720);
+        ChessGame* chessGame = new ChessGame(720, "test name");
         chessGame->launch();
         
     });
