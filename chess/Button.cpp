@@ -24,10 +24,15 @@ Button::Button(float xPercent, float yPercent, float widthPercent, float heightP
     window->addDrawable(rect);
     
     Font font;
-    font.loadFromFile(resourcePath() + "GlacialIndifference-Regular.otf");
-    this->text = new Text("test", font, 14);
-    //this->text->setPosition(x, y);
-    //window->addDrawable(text);
+    if (font.loadFromFile(resourcePath() + "GlacialIndifference-Regular.otf")) {
+        cout << "test" << endl;
+        this->text = new Text();
+        text->setFont(font);
+        text->setString("Hello world");
+        text->setCharacterSize(20);
+        text->setFillColor(Color::Red);
+        window->addDrawable(text);
+    }
 }
 
 void Button::update() {
