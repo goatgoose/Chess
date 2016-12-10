@@ -45,9 +45,10 @@ void Piece::moveTo(Tile* tile) {
     // capture enemy piece if it lands on it
     
     update();
-    RestClient::Response r = RestClient::post("http://localhost:4567/movePiece", "text/json",
-                                              "{from: 1a, to: 2b}");
-    cout << r.body << endl;
+    
+    ChessServerAPI::movePiece("1a", "2b", [&] {
+        cout << "moved piece" << endl;
+    });
 }
 
 bool Piece::moveIsPossible(Coordinate move) {

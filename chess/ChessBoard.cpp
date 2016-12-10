@@ -31,6 +31,7 @@ ChessBoard::ChessBoard(int scale, ChessGame* game) {
 
 void ChessBoard::createTiles() {
     bool tileIsWhite = true;
+    //vector<char> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
             Side side;
