@@ -10,6 +10,7 @@
 #define ChessGame_hpp
 
 #include <ChessWindow.hpp>
+#include <MainWindow.hpp>
 #include <ChessBoard.hpp>
 #include <Piece.hpp>
 #include <Tile.hpp>
@@ -28,7 +29,6 @@ private:
     virtual void resizeEvent(Event event) override;
     
     Button* drawButton;
-    
     Button* secedeButton;
 };
 
