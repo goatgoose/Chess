@@ -39,6 +39,7 @@
 		25AF9E401DF1F78C00712BA9 /* ChessGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */; };
 		25EEA1591DFBCCB0003C3D1D /* librestclient-cpp.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */; };
 		25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */; };
+		DD744F571DFC808E0087889D /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD744F551DFC808E0087889D /* MainWindow.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		25EEA1561DFBCC8F003C3D1D /* restclient-cpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "restclient-cpp"; path = "../../../../usr/local/Cellar/restclient-cpp"; sourceTree = "<group>"; };
 		25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librestclient-cpp.1.dylib"; path = "../../../../usr/local/Cellar/restclient-cpp/0.4.4/lib/librestclient-cpp.1.dylib"; sourceTree = "<group>"; };
 		25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GlacialIndifference-Regular.otf"; path = "resources/GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
+		DD744F551DFC808E0087889D /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
+		DD744F561DFC808E0087889D /* MainWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainWindow.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				255751C61DE4D6D200FC162E /* Button.hpp */,
 				255751C51DE4D6D200FC162E /* Button.cpp */,
 				254F045F1DE02CD1002AFD3C /* main.cpp */,
+				DD744F561DFC808E0087889D /* MainWindow.hpp */,
+				DD744F551DFC808E0087889D /* MainWindow.cpp */,
 				25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */,
 				25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
@@ -316,6 +321,7 @@
 				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
 				254F049F1DE20F06002AFD3C /* Player.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
+				DD744F571DFC808E0087889D /* MainWindow.cpp in Sources */,
 				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
 				254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */,
 				254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */,
