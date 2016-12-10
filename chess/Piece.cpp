@@ -46,7 +46,7 @@ void Piece::moveTo(Tile* tile) {
     
     update();
     
-    ChessServerAPI::movePiece(player, "1a", "2b", [&] {
+    ChessServerAPI::movePiece(board, "1a", "2b", [&] {
         cout << "moved piece" << endl;
     });
 }

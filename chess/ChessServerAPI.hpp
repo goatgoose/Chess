@@ -10,14 +10,16 @@
 #define ChessServerAPI_hpp
 
 #include "restclient-cpp/restclient.h"
-#include <Player.hpp>
 #include <iostream>
+
+class ChessGame;
+class ChessBoard;
 
 using namespace std;
 
 class ChessServerAPI {
 public:
-    static void movePiece(Player* lastTurn, string from, string to, function<void()> success);
+    static void movePiece(ChessBoard* board, string from, string to, function<void()> success);
 };
 
 #endif /* ChessServerAPI_hpp */
