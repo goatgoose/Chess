@@ -12,8 +12,10 @@ MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81)) {
     
     
     localButton = new Button(0.5, 0.4, 0.4, 0.275, this, [&] {
+        this->renderWindow->close();
         ChessGame* chessGame = new ChessGame(720);
         chessGame->launch();
+        
     });
     localButton->setColor(Color(96, 108, 131));
     

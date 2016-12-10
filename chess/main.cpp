@@ -29,8 +29,7 @@ using namespace std;
 int main(int, char const**) {
     
     MainWindow* mainWindow = new MainWindow();
-    //ChessGame* chessGame = new ChessGame(720);
-    mainWindow->launch();
+       mainWindow->launch();
     
     
     
