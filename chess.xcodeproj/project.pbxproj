@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 254F045C1DE02CD1002AFD3C /* ResourcePath.mm */; };
+		254F04601DE02CD1002AFD3C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F045F1DE02CD1002AFD3C /* main.cpp */; };
+		254F04691DE02CD1002AFD3C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04681DE02CD1002AFD3C /* icon.png */; };
+		254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F046F1DE030E4002AFD3C /* ChessBoard.cpp */; };
+		254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04751DE0B4CF002AFD3C /* Tile.cpp */; };
+		254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F047B1DE0CD3E002AFD3C /* Piece.cpp */; };
+		254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F047F1DE0CF54002AFD3C /* Pawn.cpp */; };
+		254F048E1DE0D9E6002AFD3C /* bishop-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04821DE0D9E6002AFD3C /* bishop-black.png */; };
+		254F048F1DE0D9E6002AFD3C /* bishop-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04831DE0D9E6002AFD3C /* bishop-white.png */; };
+		254F04901DE0D9E6002AFD3C /* king-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04841DE0D9E6002AFD3C /* king-black.png */; };
+		254F04911DE0D9E6002AFD3C /* king-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04851DE0D9E6002AFD3C /* king-white.png */; };
+		254F04921DE0D9E6002AFD3C /* knight-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04861DE0D9E6002AFD3C /* knight-black.png */; };
+		254F04931DE0D9E6002AFD3C /* knight-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04871DE0D9E6002AFD3C /* knight-white.png */; };
+		254F04941DE0D9E6002AFD3C /* pawn-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04881DE0D9E6002AFD3C /* pawn-black.png */; };
+		254F04951DE0D9E6002AFD3C /* pawn-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F04891DE0D9E6002AFD3C /* pawn-white.png */; };
+		254F04961DE0D9E6002AFD3C /* queen-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048A1DE0D9E6002AFD3C /* queen-black.png */; };
+		254F04971DE0D9E6002AFD3C /* queen-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048B1DE0D9E6002AFD3C /* queen-white.png */; };
+		254F04981DE0D9E6002AFD3C /* rook-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048C1DE0D9E6002AFD3C /* rook-black.png */; };
+		254F04991DE0D9E6002AFD3C /* rook-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 254F048D1DE0D9E6002AFD3C /* rook-white.png */; };
+		254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049A1DE0F4C9002AFD3C /* Rook.cpp */; };
+		254F049F1DE20F06002AFD3C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F049D1DE20F06002AFD3C /* Player.cpp */; };
+		254F04A21DE22321002AFD3C /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A01DE22321002AFD3C /* Coordinate.cpp */; };
+		254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A61DE2BE51002AFD3C /* Knight.cpp */; };
+		254F04AB1DE2C507002AFD3C /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04A91DE2C507002AFD3C /* Bishop.cpp */; };
+		254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AC1DE33D56002AFD3C /* Queen.cpp */; };
+		254F04B11DE341B4002AFD3C /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AF1DE341B4002AFD3C /* King.cpp */; };
+		255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C31DE4A0F800FC162E /* Clickable.cpp */; };
+		255751C71DE4D6D200FC162E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C51DE4D6D200FC162E /* Button.cpp */; };
+		25AF9E3D1DF1D21300712BA9 /* ChessWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */; };
+		25AF9E401DF1F78C00712BA9 /* ChessGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */; };
+		25EEA1591DFBCCB0003C3D1D /* librestclient-cpp.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */; };
+		25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		254F04571DE02CD1002AFD3C /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		254F045B1DE02CD1002AFD3C /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chess-Info.plist"; sourceTree = "<group>"; };
+		254F045C1DE02CD1002AFD3C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		254F045F1DE02CD1002AFD3C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		254F04681DE02CD1002AFD3C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		254F046F1DE030E4002AFD3C /* ChessBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessBoard.cpp; sourceTree = "<group>"; };
+		254F04701DE030E4002AFD3C /* ChessBoard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChessBoard.hpp; sourceTree = "<group>"; };
+		254F04751DE0B4CF002AFD3C /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
+		254F04761DE0B4CF002AFD3C /* Tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tile.hpp; sourceTree = "<group>"; };
+		254F047B1DE0CD3E002AFD3C /* Piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
+		254F047C1DE0CD3E002AFD3C /* Piece.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Piece.hpp; sourceTree = "<group>"; };
+		254F047F1DE0CF54002AFD3C /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
+		254F04801DE0CF54002AFD3C /* Pawn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pawn.hpp; sourceTree = "<group>"; };
+		254F04821DE0D9E6002AFD3C /* bishop-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bishop-black.png"; path = "resources/bishop-black.png"; sourceTree = "<group>"; };
+		254F04831DE0D9E6002AFD3C /* bishop-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bishop-white.png"; path = "resources/bishop-white.png"; sourceTree = "<group>"; };
+		254F04841DE0D9E6002AFD3C /* king-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "king-black.png"; path = "resources/king-black.png"; sourceTree = "<group>"; };
+		254F04851DE0D9E6002AFD3C /* king-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "king-white.png"; path = "resources/king-white.png"; sourceTree = "<group>"; };
+		254F04861DE0D9E6002AFD3C /* knight-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "knight-black.png"; path = "resources/knight-black.png"; sourceTree = "<group>"; };
+		254F04871DE0D9E6002AFD3C /* knight-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "knight-white.png"; path = "resources/knight-white.png"; sourceTree = "<group>"; };
+		254F04881DE0D9E6002AFD3C /* pawn-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pawn-black.png"; path = "resources/pawn-black.png"; sourceTree = "<group>"; };
+		254F04891DE0D9E6002AFD3C /* pawn-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pawn-white.png"; path = "resources/pawn-white.png"; sourceTree = "<group>"; };
+		254F048A1DE0D9E6002AFD3C /* queen-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "queen-black.png"; path = "resources/queen-black.png"; sourceTree = "<group>"; };
+		254F048B1DE0D9E6002AFD3C /* queen-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "queen-white.png"; path = "resources/queen-white.png"; sourceTree = "<group>"; };
+		254F048C1DE0D9E6002AFD3C /* rook-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rook-black.png"; path = "resources/rook-black.png"; sourceTree = "<group>"; };
+		254F048D1DE0D9E6002AFD3C /* rook-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rook-white.png"; path = "resources/rook-white.png"; sourceTree = "<group>"; };
+		254F049A1DE0F4C9002AFD3C /* Rook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
+		254F049B1DE0F4C9002AFD3C /* Rook.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rook.hpp; sourceTree = "<group>"; };
+		254F049D1DE20F06002AFD3C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		254F049E1DE20F06002AFD3C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		254F04A01DE22321002AFD3C /* Coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coordinate.cpp; sourceTree = "<group>"; };
+		254F04A11DE22321002AFD3C /* Coordinate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Coordinate.hpp; sourceTree = "<group>"; };
+		254F04A41DE2495C002AFD3C /* Clickable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clickable.hpp; sourceTree = "<group>"; };
+		254F04A61DE2BE51002AFD3C /* Knight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
+		254F04A71DE2BE51002AFD3C /* Knight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Knight.hpp; sourceTree = "<group>"; };
+		254F04A91DE2C507002AFD3C /* Bishop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
+		254F04AA1DE2C507002AFD3C /* Bishop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Bishop.hpp; sourceTree = "<group>"; };
+		254F04AC1DE33D56002AFD3C /* Queen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queen.cpp; sourceTree = "<group>"; };
+		254F04AD1DE33D56002AFD3C /* Queen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queen.hpp; sourceTree = "<group>"; };
+		254F04AF1DE341B4002AFD3C /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		254F04B01DE341B4002AFD3C /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
+		255751C31DE4A0F800FC162E /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clickable.cpp; sourceTree = "<group>"; };
+		255751C51DE4D6D200FC162E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
+		255751C61DE4D6D200FC162E /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
+		25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessWindow.cpp; sourceTree = "<group>"; };
+		25AF9E3C1DF1D21300712BA9 /* ChessWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChessWindow.hpp; sourceTree = "<group>"; };
+		25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessGame.cpp; sourceTree = "<group>"; };
+		25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChessGame.hpp; sourceTree = "<group>"; };
+		25EEA1541DFBC2D8003C3D1D /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		25EEA1561DFBCC8F003C3D1D /* restclient-cpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "restclient-cpp"; path = "../../../../usr/local/Cellar/restclient-cpp"; sourceTree = "<group>"; };
+		25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librestclient-cpp.1.dylib"; path = "../../../../usr/local/Cellar/restclient-cpp/0.4.4/lib/librestclient-cpp.1.dylib"; sourceTree = "<group>"; };
+		25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GlacialIndifference-Regular.otf"; path = "resources/GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		254F04531DE02CD0002AFD3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25EEA1591DFBCCB0003C3D1D /* librestclient-cpp.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		254F044D1DE02CD0002AFD3C = {
+			isa = PBXGroup;
+			children = (
+				254F04591DE02CD1002AFD3C /* chess */,
+				254F04581DE02CD1002AFD3C /* Products */,
+				25EEA1531DFBC2D8003C3D1D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		254F04581DE02CD1002AFD3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				254F04571DE02CD1002AFD3C /* chess.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		254F04591DE02CD1002AFD3C /* chess */ = {
+			isa = PBXGroup;
+			children = (
+				254F045C1DE02CD1002AFD3C /* ResourcePath.mm */,
+				254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */,
+				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
+				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
+				25AF9E3C1DF1D21300712BA9 /* ChessWindow.hpp */,
+				25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */,
+				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
+				255751C31DE4A0F800FC162E /* Clickable.cpp */,
+				255751C61DE4D6D200FC162E /* Button.hpp */,
+				255751C51DE4D6D200FC162E /* Button.cpp */,
+				254F045F1DE02CD1002AFD3C /* main.cpp */,
+				25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */,
+				25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */,
+				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
+				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
+				254F049E1DE20F06002AFD3C /* Player.hpp */,
+				254F049D1DE20F06002AFD3C /* Player.cpp */,
+				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
+				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
+				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
+				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
+				254F047E1DE0CF25002AFD3C /* Pieces */,
+				254F04611DE02CD1002AFD3C /* Resources */,
+				254F045A1DE02CD1002AFD3C /* Supporting Files */,
+			);
+			path = chess;
+			sourceTree = "<group>";
+		};
+		254F045A1DE02CD1002AFD3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				254F045B1DE02CD1002AFD3C /* chess-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		254F04611DE02CD1002AFD3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */,
+				254F04821DE0D9E6002AFD3C /* bishop-black.png */,
+				254F04831DE0D9E6002AFD3C /* bishop-white.png */,
+				254F04841DE0D9E6002AFD3C /* king-black.png */,
+				254F04851DE0D9E6002AFD3C /* king-white.png */,
+				254F04861DE0D9E6002AFD3C /* knight-black.png */,
+				254F04871DE0D9E6002AFD3C /* knight-white.png */,
+				254F04881DE0D9E6002AFD3C /* pawn-black.png */,
+				254F04891DE0D9E6002AFD3C /* pawn-white.png */,
+				254F048A1DE0D9E6002AFD3C /* queen-black.png */,
+				254F048B1DE0D9E6002AFD3C /* queen-white.png */,
+				254F048C1DE0D9E6002AFD3C /* rook-black.png */,
+				254F048D1DE0D9E6002AFD3C /* rook-white.png */,
+				254F04681DE02CD1002AFD3C /* icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		254F047E1DE0CF25002AFD3C /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				254F04801DE0CF54002AFD3C /* Pawn.hpp */,
+				254F047F1DE0CF54002AFD3C /* Pawn.cpp */,
+				254F049B1DE0F4C9002AFD3C /* Rook.hpp */,
+				254F049A1DE0F4C9002AFD3C /* Rook.cpp */,
+				254F04A71DE2BE51002AFD3C /* Knight.hpp */,
+				254F04A61DE2BE51002AFD3C /* Knight.cpp */,
+				254F04AA1DE2C507002AFD3C /* Bishop.hpp */,
+				254F04A91DE2C507002AFD3C /* Bishop.cpp */,
+				254F04AD1DE33D56002AFD3C /* Queen.hpp */,
+				254F04AC1DE33D56002AFD3C /* Queen.cpp */,
+				254F04B01DE341B4002AFD3C /* King.hpp */,
+				254F04AF1DE341B4002AFD3C /* King.cpp */,
+			);
+			name = Pieces;
+			sourceTree = "<group>";
+		};
+		25EEA1531DFBC2D8003C3D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */,
+				25EEA1561DFBCC8F003C3D1D /* restclient-cpp */,
+				25EEA1541DFBC2D8003C3D1D /* libcurl.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		254F04561DE02CD0002AFD3C /* chess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 254F046C1DE02CD1002AFD3C /* Build configuration list for PBXNativeTarget "chess" */;
+			buildPhases = (
+				254F04521DE02CD0002AFD3C /* Sources */,
+				254F04531DE02CD0002AFD3C /* Frameworks */,
+				254F04541DE02CD0002AFD3C /* Resources */,
+				254F04551DE02CD0002AFD3C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chess;
+			productName = chess;
+			productReference = 254F04571DE02CD1002AFD3C /* chess.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		254F044E1DE02CD0002AFD3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sam Clark";
+				TargetAttributes = {
+					254F04561DE02CD0002AFD3C = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 254F04511DE02CD0002AFD3C /* Build configuration list for PBXProject "chess" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 254F044D1DE02CD0002AFD3C;
+			productRefGroup = 254F04581DE02CD1002AFD3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				254F04561DE02CD0002AFD3C /* chess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		254F04541DE02CD0002AFD3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				254F04901DE0D9E6002AFD3C /* king-black.png in Resources */,
+				254F04941DE0D9E6002AFD3C /* pawn-black.png in Resources */,
+				254F04991DE0D9E6002AFD3C /* rook-white.png in Resources */,
+				254F048E1DE0D9E6002AFD3C /* bishop-black.png in Resources */,
+				254F04971DE0D9E6002AFD3C /* queen-white.png in Resources */,
+				254F04921DE0D9E6002AFD3C /* knight-black.png in Resources */,
+				254F04951DE0D9E6002AFD3C /* pawn-white.png in Resources */,
+				254F04981DE0D9E6002AFD3C /* rook-black.png in Resources */,
+				254F04691DE02CD1002AFD3C /* icon.png in Resources */,
+				254F048F1DE0D9E6002AFD3C /* bishop-white.png in Resources */,
+				254F04931DE0D9E6002AFD3C /* knight-white.png in Resources */,
+				254F04961DE0D9E6002AFD3C /* queen-black.png in Resources */,
+				25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */,
+				254F04911DE0D9E6002AFD3C /* king-white.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		254F04551DE02CD0002AFD3C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/usr/local/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$CMAKE_INSTALL_FRAMEWORK_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		254F04521DE02CD0002AFD3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */,
+				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
+				254F049F1DE20F06002AFD3C /* Player.cpp in Sources */,
+				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
+				254F04811DE0CF54002AFD3C /* Pawn.cpp in Sources */,
+				254F049C1DE0F4C9002AFD3C /* Rook.cpp in Sources */,
+				254F04AE1DE33D56002AFD3C /* Queen.cpp in Sources */,
+				25AF9E401DF1F78C00712BA9 /* ChessGame.cpp in Sources */,
+				255751C71DE4D6D200FC162E /* Button.cpp in Sources */,
+				254F04A21DE22321002AFD3C /* Coordinate.cpp in Sources */,
+				25AF9E3D1DF1D21300712BA9 /* ChessWindow.cpp in Sources */,
+				254F04B11DE341B4002AFD3C /* King.cpp in Sources */,
+				254F04A81DE2BE51002AFD3C /* Knight.cpp in Sources */,
+				254F045D1DE02CD1002AFD3C /* ResourcePath.mm in Sources */,
+				254F04771DE0B4CF002AFD3C /* Tile.cpp in Sources */,
+				255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */,
+				254F04AB1DE2C507002AFD3C /* Bishop.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		254F046A1DE02CD1002AFD3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		254F046B1DE02CD1002AFD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		254F046D1DE02CD1002AFD3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "chess/chess-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/usr/local/Cellar/restclient-cpp/0.4.4/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		254F046E1DE02CD1002AFD3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "chess/chess-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/usr/local/Cellar/restclient-cpp/0.4.4/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		254F04511DE02CD0002AFD3C /* Build configuration list for PBXProject "chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				254F046A1DE02CD1002AFD3C /* Debug */,
+				254F046B1DE02CD1002AFD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		254F046C1DE02CD1002AFD3C /* Build configuration list for PBXNativeTarget "chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				254F046D1DE02CD1002AFD3C /* Debug */,
+				254F046E1DE02CD1002AFD3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 254F044E1DE02CD0002AFD3C /* Project object */;
+}
