@@ -8,7 +8,7 @@
 
 #include "MainWindow.hpp"
 
-MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81)) {
+MainWindow::MainWindow(): ChessWindow(240, 400, Color(232, 174, 81), false) {
     
     
     localButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {

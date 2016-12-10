@@ -31,7 +31,7 @@ Button::Button(float xPercent, float yPercent, float widthPercent, float heightP
         text->setString("Hello world");
         text->setCharacterSize(20);
         text->setFillColor(Color::Red);
-        window->addDrawable(text);
+        //window->addDrawable(text);
     }
 }
 

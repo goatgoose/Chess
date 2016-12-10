@@ -8,8 +8,13 @@
 
 #include "ChessWindow.hpp"
 
-ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
-    this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window");
+ChessWindow::ChessWindow(int x, int y, Color backgroundColor, bool isResizable) {
+    if (isResizable) {
+        this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window");
+    } else {
+        this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window", Style::Close);
+    }
+    
     this->renderWindow->setVerticalSyncEnabled(true);
     this->clickables = vector<Clickable*>();
     this->drawables = vector<Drawable*>();

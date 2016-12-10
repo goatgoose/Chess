@@ -19,7 +19,7 @@ using namespace std;
 
 class ChessWindow {
 public:
-    ChessWindow(int x, int y, Color backgroundColor);
+    ChessWindow(int x, int y, Color backgroundColor, bool isResizable);
     
     void launch();
     

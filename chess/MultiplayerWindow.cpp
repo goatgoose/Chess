@@ -8,7 +8,7 @@
 
 #include "MultiplayerWindow.hpp"
 
-MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81)) {
+MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81), false) {
     
     
     /*joinButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {

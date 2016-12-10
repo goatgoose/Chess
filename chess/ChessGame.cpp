@@ -8,7 +8,7 @@
 
 #include "ChessGame.hpp"
 
-ChessGame::ChessGame(int scale, string name): ChessWindow(scale + 250, scale, Color(232, 174, 81)) {
+ChessGame::ChessGame(int scale, string name): ChessWindow(scale + 250, scale, Color(232, 174, 81), true) {
     this->name = name;
     this->board = new ChessBoard(scale, this);
     this->pickedUpPiece = nullptr;

@@ -11,6 +11,7 @@
 
 #include "restclient-cpp/restclient.h"
 #include <iostream>
+#include <vector>
 
 class ChessGame;
 class ChessBoard;
@@ -20,6 +21,7 @@ using namespace std;
 class ChessServerAPI {
 public:
     static void movePiece(ChessBoard* board, string from, string to, function<void()> success);
+    static vector<string> getAvalibleServers();
 };
 
 #endif /* ChessServerAPI_hpp */

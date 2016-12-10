@@ -22,3 +22,10 @@ void ChessServerAPI::movePiece(ChessBoard* board, string from, string to, functi
         success();
     }
 }
+
+vector<string> ChessServerAPI::getAvalibleServers() {
+    vector<string> tempServerNames;
+    tempServerNames.push_back("Test server 1");
+    tempServerNames.push_back("Test server 2");
+    tempServerNames.push_back("Test server 3");
+}
