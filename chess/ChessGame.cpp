@@ -8,25 +8,22 @@
 
 #include "ChessGame.hpp"
 
-ChessGame::ChessGame(int scale): ChessWindow(scale + 200, scale, Color(0, 0, 0)) {
+ChessGame::ChessGame(int scale): ChessWindow(scale + 200, scale, Color(232, 174, 81)) {
     this->board = new ChessBoard(scale, this);
     this->pickedUpPiece = nullptr;
     this->pickedUpPieceTile = nullptr;
     
-    testButton = new Button(0.8, 0.3, 0.3, 0.25, this, [&] {cout << "test" << endl;});
-    testButton->setColor(Color(95, 183, 96));
+    drawButton = new Button(0.8, 0.4, 0.4, 0.275, this, [&] {cout << "Ask for draw" << endl;});
+    drawButton->setColor(Color(96, 108, 131));
     
-    drawButton = new Button(0.8, 0.5, 100, 100, this, [&] {cout << "Ask for draw" << endl;});
-    drawButton->setColor(Color(95, 183, 96));
+    secedeButton = new Button(0.8, 0.6, 0.4, 0.275, this, [&] {cout << "Give up" << endl;});
+    secedeButton->setColor(Color(96, 108, 131));
     
-    secedeButton = new Button(0.8, 0.7, 100, 100, this, [&] {cout << "Give up" << endl;});
-    secedeButton->setColor(Color(95, 183, 96));
-    
+    this->board->setScale(scale);
 }
 
 void ChessGame::resizeEvent(Event event) {
     this->board->setScale(event.size.height);
-    this->testButton->update();
     this->drawButton->update();
     this->secedeButton->update();
 }
