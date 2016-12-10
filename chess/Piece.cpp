@@ -45,7 +45,8 @@ void Piece::moveTo(Tile* tile) {
     // capture enemy piece if it lands on it
     
     update();
-    RestClient::Response r = RestClient::get("http://localhost:4567/testRoute2");
+    RestClient::Response r = RestClient::post("http://localhost:4567/movePiece", "text/json",
+                                              "{from: 1a, to: 2b}");
     cout << r.body << endl;
 }
 
