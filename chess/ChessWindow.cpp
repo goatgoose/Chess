@@ -10,9 +10,9 @@
 
 ChessWindow::ChessWindow(int x, int y, Color backgroundColor, bool isResizable) {
     if (isResizable) {
-        this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window");
+        this->renderWindow = new RenderWindow(VideoMode(x, y), "Xtreme Chess!!!");
     } else {
-        this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window", Style::Close);
+        this->renderWindow = new RenderWindow(VideoMode(x, y), "Xtreme Chess!!!", Style::Close);
     }
     
     this->renderWindow->setVerticalSyncEnabled(true);
