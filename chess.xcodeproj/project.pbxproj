@@ -41,6 +41,7 @@
 		25EEA15C1DFC83C3003C3D1D /* ChessServerAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */; };
 		25FEA6451DE5389700AC481A /* GlacialIndifference-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */; };
 		DD744F571DFC808E0087889D /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD744F551DFC808E0087889D /* MainWindow.cpp */; };
+		DD744F5A1DFCA8F20087889D /* MultiplayerWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD744F581DFCA8F20087889D /* MultiplayerWindow.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GlacialIndifference-Regular.otf"; path = "resources/GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
 		DD744F551DFC808E0087889D /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
 		DD744F561DFC808E0087889D /* MainWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainWindow.hpp; sourceTree = "<group>"; };
+		DD744F581DFCA8F20087889D /* MultiplayerWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiplayerWindow.cpp; sourceTree = "<group>"; };
+		DD744F591DFCA8F20087889D /* MultiplayerWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiplayerWindow.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				254F045F1DE02CD1002AFD3C /* main.cpp */,
 				DD744F561DFC808E0087889D /* MainWindow.hpp */,
 				DD744F551DFC808E0087889D /* MainWindow.cpp */,
+				DD744F591DFCA8F20087889D /* MultiplayerWindow.hpp */,
+				DD744F581DFCA8F20087889D /* MultiplayerWindow.cpp */,
 				25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */,
 				25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
@@ -324,6 +329,7 @@
 			files = (
 				254F047D1DE0CD3E002AFD3C /* Piece.cpp in Sources */,
 				254F04711DE030E4002AFD3C /* ChessBoard.cpp in Sources */,
+				DD744F5A1DFCA8F20087889D /* MultiplayerWindow.cpp in Sources */,
 				25EEA15C1DFC83C3003C3D1D /* ChessServerAPI.cpp in Sources */,
 				254F049F1DE20F06002AFD3C /* Player.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,

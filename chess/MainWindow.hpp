@@ -10,6 +10,7 @@
 #define MainWindow_hpp
 
 #include <ChessWindow.hpp>
+#include <MultiplayerWindow.hpp>
 #include <ChessGame.hpp>
 #include <Button.hpp>
 
