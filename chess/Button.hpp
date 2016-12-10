@@ -19,7 +19,7 @@ using namespace sf;
 
 class Button: public Clickable {
 public:
-    Button(float xPercent, float yPercent, int width, int height, ChessWindow* window, function<void()> clickAction);
+    Button(float xPercent, float yPercent, float widthPercent, float heightPercent, ChessWindow* window, function<void()> clickAction);
     ~Button();
     
     virtual int getX1() override;
@@ -42,7 +42,9 @@ private:
     int x;
     int y;
     int width;
-    int height;
+    int height; 
+    float widthPercent;
+    float heightPercent;
     ChessWindow* window;
     function<void()> clickAction;
     

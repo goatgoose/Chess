@@ -8,21 +8,18 @@
 
 #include "Button.hpp"
 
-Button::Button(float xPercent, float yPercent, int width, int height, ChessWindow* window, function<void()> clickAction): Clickable(window) {
+Button::Button(float xPercent, float yPercent, float widthPercent, float heightPercent, ChessWindow* window, function<void()> clickAction): Clickable(window) {
     this->xPercent = xPercent;
     this->yPercent = yPercent;
-    this->width = width;
-    this->height = height;
+    this->widthPercent = widthPercent;
+    this->heightPercent = heightPercent;
     this->window = window;
     this->clickAction = clickAction;
     
     this->color = Color(50, 50, 50);
     
-    this->xPercent = xPercent;
-    this->yPercent = yPercent;
-    
     this->rect = new RectangleShape();
-    rect->setSize(Vector2f(width, height));
+    rect->setSize(Vector2f(widthPercent, heightPercent));
     rect->setFillColor(color);
     update();
     window->addDrawable(rect);
@@ -37,7 +34,10 @@ Button::Button(float xPercent, float yPercent, int width, int height, ChessWindo
 void Button::update() {
     this->x = round(this->window->renderWindow->getSize().x * xPercent);
     this->y = round(this->window->renderWindow->getSize().y * yPercent);
+    this->width = round(this->window->renderWindow->getSize().x * widthPercent);
+    this->height = round(this->window->renderWindow->getSize().y * heightPercent);
     rect->setPosition(Vector2f(x, y));
+    rect->setScale(Vector2f(width, height));
 }
 
 void Button::setLabel(string label) {
