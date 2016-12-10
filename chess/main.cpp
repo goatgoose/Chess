@@ -17,6 +17,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <ChessGame.hpp>
+#include <MainWindow.hpp>
 #include <Button.hpp>
 
 // TODO
@@ -27,8 +28,11 @@ using namespace std;
 
 int main(int, char const**) {
     
-    ChessGame* chessGame = new ChessGame(720);
-    chessGame->launch();
+    MainWindow* mainWindow = new MainWindow();
+    //ChessGame* chessGame = new ChessGame(720);
+    mainWindow->launch();
+    
+    
     
     return EXIT_SUCCESS;
 }

@@ -10,7 +10,7 @@
 
 ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
     this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window");
-    
+    this->renderWindow->setVerticalSyncEnabled(true);
     this->clickables = vector<Clickable*>();
     this->drawables = vector<Drawable*>();
     
