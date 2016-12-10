@@ -9,6 +9,7 @@
 #ifndef Piece_hpp
 #define Piece_hpp
 
+#include "restclient-cpp/restclient.h"
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>

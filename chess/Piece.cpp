@@ -45,6 +45,8 @@ void Piece::moveTo(Tile* tile) {
     // capture enemy piece if it lands on it
     
     update();
+    RestClient::Response r = RestClient::get("http://localhost:4567/testRoute2");
+    cout << r.body << endl;
 }
 
 bool Piece::moveIsPossible(Coordinate move) {

@@ -20,6 +20,7 @@
 #include <Button.hpp>
 
 // TODO
+// call update to all clickables- dont manually update
 // button class
 //   make scalable
 //   positioned in percents
@@ -29,6 +30,7 @@
 // host / join / find game menu
 //   go to this first before actual chess game
 // timer system
+// capture functionality
 // show captured pieces
 // test for checkmate every move, if no possible moves u lose
 // in game buttons
