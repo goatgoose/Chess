@@ -27,7 +27,7 @@ using namespace std;
 
 int main(int, char const**) {
     
-    ChessGame* chessGame = new ChessGame(900);
+    ChessGame* chessGame = new ChessGame(720);
     chessGame->launch();
     
     return EXIT_SUCCESS;

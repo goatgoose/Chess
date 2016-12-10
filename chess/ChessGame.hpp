@@ -27,8 +27,6 @@ private:
     
     virtual void resizeEvent(Event event) override;
     
-    Button* testButton;
-    
     Button* drawButton;
     
     Button* secedeButton;

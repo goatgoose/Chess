@@ -9,7 +9,7 @@
 #include "ChessWindow.hpp"
 
 ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
-    this->renderWindow = new RenderWindow(VideoMode(1440, 900), "SFML window");
+    this->renderWindow = new RenderWindow(VideoMode(x, y), "SFML window");
     
     this->clickables = vector<Clickable*>();
     this->drawables = vector<Drawable*>();
@@ -18,7 +18,7 @@ ChessWindow::ChessWindow(int x, int y, Color backgroundColor) {
     this->lastHovered = nullptr;
     
     background = new RectangleShape();
-    background->setSize(Vector2f(1440, 900));
+    background->setSize(Vector2f(x, y));
     background->setPosition(Vector2f(0, 0));
     background->setFillColor(backgroundColor);
     addDrawable(background);
