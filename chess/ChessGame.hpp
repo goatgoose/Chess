@@ -25,6 +25,7 @@ public:
     
     string getName();
     
+    ~ChessGame();
 private:
     string name;
     

@@ -22,6 +22,7 @@ ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(sca
         this->renderWindow->close();
         MainWindow* mainWindow = new MainWindow();
         mainWindow->launch();
+        delete this;
     });
     secedeButton->setColor(Color(96, 108, 131));
     secedeButton->setLabel("Surrender");
@@ -35,8 +36,14 @@ void ChessGame::resizeEvent(Event event) {
     this->secedeButton->update();
 }
 
-
-
 string ChessGame::getName() {
     return name;
+}
+
+ChessGame::~ChessGame() {
+    ChessServerAPI::deleteGame(board, [] {});
+    
+    delete board;
+    delete drawButton;
+    delete secedeButton;
 }
