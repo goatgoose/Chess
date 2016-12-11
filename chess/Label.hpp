@@ -19,13 +19,13 @@ using namespace std;
 
 class Label {
 public:
-    Label(string content, ChessWindow* window);
-    void setPosition(Coordinate position);
-private:
-    string content;
-    ChessWindow* window;
+    Label(string content, int size, ChessWindow* window);
     
     Text* text;
+private:
+    string content;
+    int size;
+    ChessWindow* window;
 };
 
 #endif /* Label_hpp */

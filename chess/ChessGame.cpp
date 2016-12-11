@@ -16,6 +16,7 @@ ChessGame::ChessGame(int scale, string name): ChessWindow(scale + 250, scale, Co
     
     drawButton = new Button(0.8, 0.4, 0.15, 0.075, this, [&] {cout << "Ask for draw" << endl;});
     drawButton->setColor(Color(96, 108, 131));
+    drawButton->setLabel("Ask For Draw");
     
     secedeButton = new Button(0.8, 0.6, 0.15, 0.075, this, [&] {
         this->renderWindow->close();
@@ -23,6 +24,7 @@ ChessGame::ChessGame(int scale, string name): ChessWindow(scale + 250, scale, Co
         mainWindow->launch();
     });
     secedeButton->setColor(Color(96, 108, 131));
+    secedeButton->setLabel("Surrender");
     
     this->board->setScale(scale);
 }

@@ -18,9 +18,11 @@ MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81
         
     });
     joinButton->setColor(Color(96, 108, 131));
+    joinButton->setLabel("Join Game");
     
     hostButton = new Button(0.15, 0.8, 0.2, 0.10, this, [&] {cout << "Host Game" << endl;});
     hostButton->setColor(Color(96, 108, 131));
+    hostButton->setLabel("Host Game");
     
     backButton = new Button(0.65, 0.8, 0.2, 0.10, this, [&] {
         this->renderWindow->close();
@@ -28,6 +30,7 @@ MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81
         mainWindow->launch();
     });
     backButton->setColor(Color(96, 108, 131));
+    backButton->setLabel("Back");
 }
 
 void MultiplayerWindow::resizeEvent(Event event) {

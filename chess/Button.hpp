@@ -33,7 +33,7 @@ public:
     virtual void hoverEvent() override;
     virtual void unhoverEvent() override;
     
-    void setLabel(string label);
+    void setLabel(string content);
     void setColor(Color color);
     
     void update();
@@ -50,6 +50,8 @@ private:
     function<void()> clickAction;
     
     Color color;
+    
+    Label* label;
     
     RectangleShape* rect;
     Text* text;

@@ -10,16 +10,29 @@
 #include "ChessGame.hpp"
 #include "ChessBoard.hpp"
 
+string url = "http://localhost:4567/";
+
 void ChessServerAPI::movePiece(ChessBoard* board, string from, string to, function<void()> success) {
-    string json =   "{game: " + board->game->getName() +
-                    "lastTurn: " + board->me->getSideString() +
-                    ", from: " + from +
-                    ", to:" + to + "}";
-    RestClient::Response response = RestClient::post("http://localhost:4567/movePiece",
-                                              "text/json",
-                                              json);
+    json request;
+    request["game"] = board->game->getName();
+    request["player"] = board->me->getSideString();
+    request["from"] = from;
+    request["to"] = to;
+    
+    RestClient::Response response = RestClient::post(url + "movePiece", "text/json", request.dump());
     if (response.body == "success") {
         success();
+    }
+}
+
+string ChessServerAPI::getLastTurn(ChessBoard* board, function<void(string lastTurn)> success) {
+    json request;
+    request["game"] = board->game->getName();
+    
+    RestClient::Response response = RestClient::post(url + "getLastTurn", "text/json", request.dump());
+    if (response.body == "success") {
+        json responseObj = json::parse(response.body);
+        success(responseObj["game"]);
     }
 }
 
