@@ -11,13 +11,13 @@
 MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81), false) {
     
     
-    /*joinButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
+    joinButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
         this->renderWindow->close();
-        ChessGame* chessGame = new ChessGame(720);
+        ChessGame* chessGame = new ChessGame(720, "test game");
         chessGame->launch();
         
     });
-    joinButton->setColor(Color(96, 108, 131));*/
+    joinButton->setColor(Color(96, 108, 131));
     
     hostButton = new Button(0.15, 0.8, 0.2, 0.10, this, [&] {cout << "Host Game" << endl;});
     hostButton->setColor(Color(96, 108, 131));
@@ -30,4 +30,6 @@ MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81
     backButton->setColor(Color(96, 108, 131));
 }
 
-void MultiplayerWindow::resizeEvent(Event event){}
+void MultiplayerWindow::resizeEvent(Event event) {
+    
+}

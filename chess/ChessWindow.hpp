@@ -31,6 +31,8 @@ public:
     
     RenderWindow* renderWindow;
     
+    Font font;
+    
 private:
     
     vector<Clickable*> clickables;

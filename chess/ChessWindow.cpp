@@ -27,6 +27,11 @@ ChessWindow::ChessWindow(int x, int y, Color backgroundColor, bool isResizable) 
     background->setPosition(Vector2f(0, 0));
     background->setFillColor(backgroundColor);
     addDrawable(background);
+    
+    font = Font();
+    if (!font.loadFromFile(resourcePath() + "GlacialIndifference-Regular.otf")) {
+        cout << "can't load font" << endl;
+    }
 }
 
 void ChessWindow::launch() {

@@ -14,6 +14,7 @@
 #include "ResourcePath.hpp"
 #include <ChessWindow.hpp>
 #include <math.h>
+#include <Label.hpp>
 
 using namespace sf;
 
