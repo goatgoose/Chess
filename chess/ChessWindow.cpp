@@ -16,8 +16,10 @@ ChessWindow::ChessWindow(int x, int y, Color backgroundColor, bool isResizable) 
     }
     
     this->renderWindow->setVerticalSyncEnabled(true);
+    
     this->clickables = vector<Clickable*>();
     this->drawables = vector<Drawable*>();
+    this->timers = vector<Timer*>();
     
     this->lastClicked = nullptr;
     this->lastHovered = nullptr;
@@ -88,12 +90,21 @@ void ChessWindow::launch() {
         }
         
         renderWindow->clear();
-        
         for (int i = 0; i < drawables.size(); i++) {
             renderWindow->draw(*drawables[i]);
         }
-        
         renderWindow->display();
+        
+        int timerCount = 0;
+        while (timerCount < timers.size()) {
+            Timer* timer = timers[timerCount];
+            if (timer->hasCompleted()) {
+                timer->callback();
+                timers.erase(timers.begin() + timerCount);
+            } else {
+                timerCount++;
+            }
+        }
     }
 }
 
@@ -123,4 +134,8 @@ void ChessWindow::removeDrawable(Drawable* drawable) {
         }
     }
     drawables = newDrawables;
+}
+
+void ChessWindow::addTimer(Timer* timer) {
+    timers.push_back(timer);
 }

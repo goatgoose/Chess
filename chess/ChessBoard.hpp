@@ -25,10 +25,16 @@ using namespace sf;
 
 class ChessGame;
 
+enum GameMode {
+    SINGLE_PLAYER,
+    MULTI_PLAYER
+};
+
 class ChessBoard {
 public:
-    ChessBoard(int scale, ChessGame* game);
+    ChessBoard(int scale, GameMode gameMode, ChessGame* game);
     
+    GameMode gameMode;
     ChessGame* game;
     
     Tile* tiles[8][8];
@@ -36,9 +42,10 @@ public:
     Player* whitePlayer;
     Player* blackPlayer;
     Player* me;
-    Player* other;
     
     bool isMyTurn;
+    
+    void waitForTurn();
     
     void setScale(int scale);
     int getOffset();

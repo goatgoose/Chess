@@ -35,6 +35,7 @@
 		254F04B11DE341B4002AFD3C /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 254F04AF1DE341B4002AFD3C /* King.cpp */; };
 		255751C41DE4A0F800FC162E /* Clickable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C31DE4A0F800FC162E /* Clickable.cpp */; };
 		255751C71DE4D6D200FC162E /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255751C51DE4D6D200FC162E /* Button.cpp */; };
+		255D7C2F1DFDFFFE00BA719E /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 255D7C2D1DFDFFFE00BA719E /* Timer.cpp */; };
 		25730EFC1DFD12AC004D8830 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25730EFA1DFD12AC004D8830 /* Label.cpp */; };
 		25AF9E3D1DF1D21300712BA9 /* ChessWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */; };
 		25AF9E401DF1F78C00712BA9 /* ChessGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */; };
@@ -91,6 +92,8 @@
 		255751C51DE4D6D200FC162E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		255751C61DE4D6D200FC162E /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
 		255D7C2C1DFDCCD200BA719E /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		255D7C2D1DFDFFFE00BA719E /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		255D7C2E1DFDFFFE00BA719E /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		25730EFA1DFD12AC004D8830 /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		25730EFB1DFD12AC004D8830 /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 		25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessWindow.cpp; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */,
 				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
 				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
+				255D7C2E1DFDFFFE00BA719E /* Timer.hpp */,
+				255D7C2D1DFDFFFE00BA719E /* Timer.cpp */,
 				25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */,
 				25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */,
 				25AF9E3C1DF1D21300712BA9 /* ChessWindow.hpp */,
@@ -339,6 +344,7 @@
 				DD744F5A1DFCA8F20087889D /* MultiplayerWindow.cpp in Sources */,
 				25EEA15C1DFC83C3003C3D1D /* ChessServerAPI.cpp in Sources */,
 				254F049F1DE20F06002AFD3C /* Player.cpp in Sources */,
+				255D7C2F1DFDFFFE00BA719E /* Timer.cpp in Sources */,
 				254F04601DE02CD1002AFD3C /* main.cpp in Sources */,
 				25730EFC1DFD12AC004D8830 /* Label.cpp in Sources */,
 				DD744F571DFC808E0087889D /* MainWindow.cpp in Sources */,

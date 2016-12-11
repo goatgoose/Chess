@@ -9,29 +9,48 @@
 #include "ChessBoard.hpp"
 #include "ChessGame.hpp"
 
-ChessBoard::ChessBoard(int scale, ChessGame* game) {
+ChessBoard::ChessBoard(int scale, GameMode gameMode, ChessGame* game) {
     this->scale = scale;
+    this->gameMode = gameMode;
     this->game = game;
     
     this->whitePlayer = new Player(WHITE, this);
     this->blackPlayer = new Player(BLACK, this);
     
-    // get this from server when joining or creating game
-    this->me = whitePlayer;
-    
-    if (this->me->getSide() == WHITE) {
-        this->isMyTurn = true;
-    } else {
-        this->isMyTurn = false;
-    }
+    ChessServerAPI::createGame(this, [&] (bool exists) {
+        if (exists) {
+            me = blackPlayer;
+            this->isMyTurn = false;
+            waitForTurn();
+        } else {
+            me = whitePlayer;
+            this->isMyTurn = true;
+        }
+    });
     
     createTiles();
     createPieces();
 }
 
+void ChessBoard::waitForTurn() {
+    game->addTimer(new Timer(5, [&] {
+        cout << "timer" << endl;
+        ChessServerAPI::getLastTurn(this, [&] (string lastTurn) {
+            if (lastTurn == me->getSideString()) {
+                waitForTurn();
+            } else  {
+                ChessServerAPI::getLastMove(this, [&] (Coordinate from, Coordinate to) {
+                    Piece* piece = tiles[from.getX()][from.getY()]->piece;
+                    piece->moveTo(tiles[to.getX()][to.getY()]);
+                    isMyTurn = true;
+                });
+            }
+        });
+    }));
+}
+
 void ChessBoard::createTiles() {
     bool tileIsWhite = true;
-    //vector<char> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
             Side side;

@@ -18,7 +18,7 @@
 
 class ChessGame: public ChessWindow {
 public:
-    ChessGame(int scale, string name);
+    ChessGame(int scale, string name, GameMode gameMode);
     
     Piece* pickedUpPiece;
     Tile* pickedUpPieceTile;

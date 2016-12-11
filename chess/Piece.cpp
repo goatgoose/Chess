@@ -45,10 +45,6 @@ void Piece::moveTo(Tile* tile) {
     // capture enemy piece if it lands on it
     
     update();
-    
-    ChessServerAPI::movePiece(board, "1a", "2b", [&] {
-        cout << "moved piece" << endl;
-    });
 }
 
 bool Piece::moveIsPossible(Coordinate move) {

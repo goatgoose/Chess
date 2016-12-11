@@ -13,6 +13,7 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 #include <Clickable.hpp>
+#include <Timer.hpp>
 
 using namespace sf;
 using namespace std;
@@ -29,14 +30,16 @@ public:
     void addDrawable(Drawable* drawable);
     void removeDrawable(Drawable* drawable);
     
+    void addTimer(Timer*);
+    
     RenderWindow* renderWindow;
     
     Font font;
     
 private:
-    
     vector<Clickable*> clickables;
     vector<sf::Drawable*> drawables;
+    vector<Timer*> timers;
     
     RectangleShape* background;
     

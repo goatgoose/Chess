@@ -58,16 +58,23 @@ void Tile::releaseEvent() {
             
             if (isALegalMove) {
                 board->game->pickedUpPiece->moveTo(this);
-                board->isMyTurn = false;
-                // send move to server
-                
-                // temp while no server
-                board->isMyTurn = true;
-                if (board->me == board->blackPlayer) {
-                    board->me = board->whitePlayer;
-                } else {
-                    board->me = board->blackPlayer;
+    
+                if (board->gameMode == SINGLE_PLAYER) {
+                    board->isMyTurn = true;
+                    if (board->me == board->blackPlayer) {
+                        board->me = board->whitePlayer;
+                    } else {
+                        board->me = board->blackPlayer;
+                    }
+                } else if (board->gameMode == MULTI_PLAYER) {
+                    board->isMyTurn = false;
+                    Coordinate from(board->game->pickedUpPieceTile->getX(), board->game->pickedUpPieceTile->getY());
+                    Coordinate to(x, y);
+                    ChessServerAPI::movePiece(board, from, to, [&] {
+                        board->waitForTurn();
+                    });
                 }
+                
             }
             
             board->game->pickedUpPiece = nullptr;

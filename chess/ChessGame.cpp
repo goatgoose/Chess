@@ -8,9 +8,9 @@
 
 #include "ChessGame.hpp"
 
-ChessGame::ChessGame(int scale, string name): ChessWindow(scale + 250, scale, Color(232, 174, 81), true) {
-    this->name = name;
-    this->board = new ChessBoard(scale, this);
+ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(scale + 250, scale, Color(232, 174, 81), true) {
+    this->name = "temp name";
+    this->board = new ChessBoard(scale, gameMode, this);
     this->pickedUpPiece = nullptr;
     this->pickedUpPieceTile = nullptr;
     
@@ -34,6 +34,8 @@ void ChessGame::resizeEvent(Event event) {
     this->drawButton->update();
     this->secedeButton->update();
 }
+
+
 
 string ChessGame::getName() {
     return name;
