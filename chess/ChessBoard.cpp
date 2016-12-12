@@ -17,28 +17,49 @@ ChessBoard::ChessBoard(int scale, GameMode gameMode, ChessGame* game) {
     this->whitePlayer = new Player(WHITE, this);
     this->blackPlayer = new Player(BLACK, this);
     
-    ChessServerAPI::createGame(this, [&] (bool exists) {
-        if (exists) {
-            me = blackPlayer;
-            this->isMyTurn = false;
-            waitForTurn();
-        } else {
-            me = whitePlayer;
-            this->isMyTurn = true;
-        }
-    });
-    
     createTiles();
     createPieces();
+    
+    if (gameMode == MULTI_PLAYER) {
+        ChessServerAPI::createGame(this, [&] (bool exists) {
+            if (exists) {
+                me = blackPlayer;
+                this->isMyTurn = false;
+                waitForTurn();
+            } else {
+                me = whitePlayer;
+                this->isMyTurn = true;
+                this->waitingForOpponent = true;
+                waitForOpponent();
+            }
+        });
+    } else {
+        me = whitePlayer;
+        this->isMyTurn = true;
+        this->waitingForOpponent = false;
+    }
+}
+
+void ChessBoard::waitForOpponent() {
+    this->game->notificationLabel->text->setString(sf::String("Waiting for opponent..."));
+    game->addTimer(new Timer(5, [&] {
+        ChessServerAPI::isWaiting(this, [&] (bool isWaiting) {
+            if (isWaiting) {
+                waitForOpponent();
+            } else {
+                waitingForOpponent = false;
+                game->notificationLabel->text->setString(sf::String(""));
+            }
+        });
+    }));
 }
 
 void ChessBoard::waitForTurn() {
     game->addTimer(new Timer(5, [&] {
-        cout << "timer" << endl;
         ChessServerAPI::getLastTurn(this, [&] (string lastTurn) {
             if (lastTurn == me->getSideString()) {
                 waitForTurn();
-            } else  {
+            } else {
                 ChessServerAPI::getLastMove(this, [&] (Coordinate from, Coordinate to) {
                     Piece* piece = tiles[from.getX()][from.getY()]->piece;
                     piece->moveTo(tiles[to.getX()][to.getY()]);

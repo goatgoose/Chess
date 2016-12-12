@@ -14,14 +14,8 @@
 #include <Button.hpp>
 
 class MultiplayerWindow: public ChessWindow {
-
 public:
     MultiplayerWindow();
-    
-private:
-    virtual void resizeEvent(Event event) override;
-    
-    
 };
 
 

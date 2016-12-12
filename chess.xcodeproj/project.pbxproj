@@ -103,8 +103,8 @@
 		25EEA1541DFBC2D8003C3D1D /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
 		25EEA1561DFBCC8F003C3D1D /* restclient-cpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "restclient-cpp"; path = "../../../../usr/local/Cellar/restclient-cpp"; sourceTree = "<group>"; };
 		25EEA1581DFBCCB0003C3D1D /* librestclient-cpp.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "librestclient-cpp.1.dylib"; path = "../../../../usr/local/Cellar/restclient-cpp/0.4.4/lib/librestclient-cpp.1.dylib"; sourceTree = "<group>"; };
-		25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessServerAPI.cpp; sourceTree = "<group>"; };
-		25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ChessServerAPI.hpp; sourceTree = "<group>"; };
+		25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChessServerAPI.cpp; path = chess/ChessServerAPI.cpp; sourceTree = "<group>"; };
+		25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ChessServerAPI.hpp; path = chess/ChessServerAPI.hpp; sourceTree = "<group>"; };
 		25FEA6441DE5389700AC481A /* GlacialIndifference-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GlacialIndifference-Regular.otf"; path = "resources/GlacialIndifference-Regular.otf"; sourceTree = "<group>"; };
 		DD744F551DFC808E0087889D /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
 		DD744F561DFC808E0087889D /* MainWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainWindow.hpp; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 				255D7C301DFE2C6B00BA719E /* Helper */,
 				255D7C311DFE2C9F00BA719E /* Windows */,
 				254F045F1DE02CD1002AFD3C /* main.cpp */,
-				25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */,
-				25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
+				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
+				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
 				254F047E1DE0CF25002AFD3C /* Pieces */,
 				254F04611DE02CD1002AFD3C /* Resources */,
 				254F045A1DE02CD1002AFD3C /* Supporting Files */,
@@ -210,15 +210,17 @@
 		255D7C301DFE2C6B00BA719E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */,
+				25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */,
 				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
 				255751C31DE4A0F800FC162E /* Clickable.cpp */,
-				255D7C2C1DFDCCD200BA719E /* json.hpp */,
 				254F045C1DE02CD1002AFD3C /* ResourcePath.mm */,
 				254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */,
 				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
 				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
 				255D7C2E1DFDFFFE00BA719E /* Timer.hpp */,
 				255D7C2D1DFDFFFE00BA719E /* Timer.cpp */,
+				255D7C2C1DFDCCD200BA719E /* json.hpp */,
 			);
 			name = Helper;
 			path = ..;
@@ -248,8 +250,6 @@
 				255751C51DE4D6D200FC162E /* Button.cpp */,
 				254F049E1DE20F06002AFD3C /* Player.hpp */,
 				254F049D1DE20F06002AFD3C /* Player.cpp */,
-				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
-				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
 				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
 				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
 			);

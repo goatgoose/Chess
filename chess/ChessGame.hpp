@@ -23,15 +23,20 @@ public:
     Piece* pickedUpPiece;
     Tile* pickedUpPieceTile;
     
+    Label* notificationLabel;
+    
     string getName();
     
     ~ChessGame();
 private:
     string name;
+    int scale;
     
     ChessBoard* board;
     
     virtual void resizeEvent(Event event) override;
+    
+    void update();
     
     Button* drawButton;
     Button* secedeButton;

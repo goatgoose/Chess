@@ -17,6 +17,7 @@
 
 class ChessGame;
 class ChessBoard;
+class ChessWindow;
 
 using namespace std;
 using namespace nlohmann;
@@ -25,10 +26,11 @@ class ChessServerAPI {
 public:
     static void createGame(ChessBoard* board, function<void(bool exists)> success);
     static void deleteGame(ChessBoard* board, function<void()> success);
+    static void isWaiting(ChessBoard* board, function<void(bool isWaiting)> success);
     static void movePiece(ChessBoard* board, Coordinate from, Coordinate to, function<void()> success);
     static void getLastTurn(ChessBoard* board, function<void(string lastTurn)> success);
     static void getLastMove(ChessBoard* board, function<void(Coordinate from, Coordinate to)> success);
-    static void getAvailableServers(function<void(vector<string> servers)> success);
+    static void getAvailableServers(ChessWindow* window, function<void(vector<string> servers)> success);
 };
 
 #endif /* ChessServerAPI_hpp */

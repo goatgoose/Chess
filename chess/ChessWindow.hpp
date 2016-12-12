@@ -46,7 +46,7 @@ private:
     Clickable* lastClicked;
     Clickable* lastHovered;
     
-    virtual void resizeEvent(Event event) = 0;
+    virtual void resizeEvent(Event event);
 };
 
 #endif /* ChessWindow_hpp */

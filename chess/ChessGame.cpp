@@ -8,8 +8,11 @@
 
 #include "ChessGame.hpp"
 
-ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(scale + 250, scale, Color(232, 174, 81), true) {
-    this->name = "temp name";
+ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(scale + 300, scale, Color(232, 174, 81), true) {
+    cout << "game name: " << name << endl;
+    this->scale = scale;
+    this->name = name;
+    this->notificationLabel = new Label("", 20, this);
     this->board = new ChessBoard(scale, gameMode, this);
     this->pickedUpPiece = nullptr;
     this->pickedUpPieceTile = nullptr;
@@ -28,12 +31,19 @@ ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(sca
     secedeButton->setLabel("Surrender");
     
     this->board->setScale(scale);
+    
+    update();
 }
 
 void ChessGame::resizeEvent(Event event) {
     this->board->setScale(event.size.height);
+    this->update();
     this->drawButton->update();
     this->secedeButton->update();
+}
+
+void ChessGame::update() {
+    notificationLabel->text->setPosition(Vector2f(board->scale + 50, 20));
 }
 
 string ChessGame::getName() {

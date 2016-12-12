@@ -43,6 +43,7 @@ public:
     Player* blackPlayer;
     Player* me;
     
+    bool waitingForOpponent;
     bool isMyTurn;
     
     void waitForTurn();
@@ -50,12 +51,15 @@ public:
     void setScale(int scale);
     int getOffset();
     Tile* getTile(Coordinate coordinate);
+    
+    int scale;
 private:
+    void waitForOpponent();
+    
     void update();
     
     void createTiles();
     void createPieces();
-    int scale;
 };
 
 #endif /* ChessBoard_hpp */

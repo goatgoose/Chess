@@ -139,3 +139,7 @@ void ChessWindow::removeDrawable(Drawable* drawable) {
 void ChessWindow::addTimer(Timer* timer) {
     timers.push_back(timer);
 }
+
+void ChessWindow::resizeEvent(Event event) {
+
+}

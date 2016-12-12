@@ -21,9 +21,6 @@ public:
 private:
     Button* localButton;
     Button* multiplayerButton;
-    virtual void resizeEvent(Event event) override;
-    
-    
 };
 
 

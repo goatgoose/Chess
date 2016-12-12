@@ -29,7 +29,9 @@ void Tile::update() {
 }
 
 void Tile::releaseEvent() {
-    if (board->isMyTurn) {
+    cout << "isMyTurn: " << board->isMyTurn << endl;
+    cout << "waitingForOpponent: " << board->waitingForOpponent << endl;
+    if (board->isMyTurn && !board->waitingForOpponent) {
         if (board->game->pickedUpPiece == nullptr) { // choose a piece to move mode
             if (piece != nullptr) {
                 if (piece->player == board->me) {
