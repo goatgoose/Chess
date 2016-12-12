@@ -15,7 +15,7 @@ MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81
             string server = servers[i];
             cout << "server: " << server << endl;
             
-            Button* serverButton = new Button(0.1, 0.05, 0.8, 0.1, this, [=] {
+            Button* serverButton = new Button(0.1, 0.05 * (i + 1.05), 0.8, 0.1, this, [=] {
                 this->renderWindow->close();
                 ChessGame* chessGame = new ChessGame(720, server, MULTI_PLAYER);
                 chessGame->launch();
