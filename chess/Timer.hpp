@@ -2,8 +2,7 @@
 //  Timer.hpp
 //  chess
 //
-//  Created by Sam Clark on 12/11/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark
 //
 
 #ifndef Timer_hpp

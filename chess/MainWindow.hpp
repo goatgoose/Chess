@@ -2,9 +2,8 @@
 //  MainWindow.hpp
 //  chess
 //
-//  Created by Craig Conway on 12/10/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
-//
+//  Created by Craig Conway
+
 
 #ifndef MainWindow_hpp
 #define MainWindow_hpp

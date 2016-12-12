@@ -2,8 +2,7 @@
 //  Clickable.cpp
 //  chess
 //
-//  Created by Sam Clark on 11/22/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark
 //
 
 #include "Clickable.hpp"

@@ -2,8 +2,7 @@
 //  Knight.hpp
 //  chess
 //
-//  Created by Sam Clark on 11/21/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark
 //
 
 #ifndef Knight_hpp
