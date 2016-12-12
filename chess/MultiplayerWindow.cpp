@@ -10,6 +10,12 @@
 
 MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81), false) {
     
+    ChessServerAPI::getAvalibleServers([&] (vector<string> avalibleServers) {
+        for (int i = 0; i < avalibleServers.size(); i++) {
+            string server = avalibleServers[i];
+            cout << server << endl;
+        }
+    });
     
     joinButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
         this->renderWindow->close();
