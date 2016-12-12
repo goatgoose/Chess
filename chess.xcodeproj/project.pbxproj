@@ -49,8 +49,8 @@
 /* Begin PBXFileReference section */
 		254F04571DE02CD1002AFD3C /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		254F045B1DE02CD1002AFD3C /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chess-Info.plist"; sourceTree = "<group>"; };
-		254F045C1DE02CD1002AFD3C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
-		254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		254F045C1DE02CD1002AFD3C /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ResourcePath.mm; path = chess/ResourcePath.mm; sourceTree = "<group>"; };
+		254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ResourcePath.hpp; path = chess/ResourcePath.hpp; sourceTree = "<group>"; };
 		254F045F1DE02CD1002AFD3C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		254F04681DE02CD1002AFD3C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		254F046F1DE030E4002AFD3C /* ChessBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessBoard.cpp; sourceTree = "<group>"; };
@@ -77,9 +77,9 @@
 		254F049B1DE0F4C9002AFD3C /* Rook.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Rook.hpp; sourceTree = "<group>"; };
 		254F049D1DE20F06002AFD3C /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		254F049E1DE20F06002AFD3C /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		254F04A01DE22321002AFD3C /* Coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coordinate.cpp; sourceTree = "<group>"; };
-		254F04A11DE22321002AFD3C /* Coordinate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Coordinate.hpp; sourceTree = "<group>"; };
-		254F04A41DE2495C002AFD3C /* Clickable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Clickable.hpp; sourceTree = "<group>"; };
+		254F04A01DE22321002AFD3C /* Coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Coordinate.cpp; path = chess/Coordinate.cpp; sourceTree = "<group>"; };
+		254F04A11DE22321002AFD3C /* Coordinate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Coordinate.hpp; path = chess/Coordinate.hpp; sourceTree = "<group>"; };
+		254F04A41DE2495C002AFD3C /* Clickable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Clickable.hpp; path = chess/Clickable.hpp; sourceTree = "<group>"; };
 		254F04A61DE2BE51002AFD3C /* Knight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
 		254F04A71DE2BE51002AFD3C /* Knight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Knight.hpp; sourceTree = "<group>"; };
 		254F04A91DE2C507002AFD3C /* Bishop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
@@ -88,12 +88,12 @@
 		254F04AD1DE33D56002AFD3C /* Queen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Queen.hpp; sourceTree = "<group>"; };
 		254F04AF1DE341B4002AFD3C /* King.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
 		254F04B01DE341B4002AFD3C /* King.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
-		255751C31DE4A0F800FC162E /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Clickable.cpp; sourceTree = "<group>"; };
+		255751C31DE4A0F800FC162E /* Clickable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Clickable.cpp; path = chess/Clickable.cpp; sourceTree = "<group>"; };
 		255751C51DE4D6D200FC162E /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		255751C61DE4D6D200FC162E /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
-		255D7C2C1DFDCCD200BA719E /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
-		255D7C2D1DFDFFFE00BA719E /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
-		255D7C2E1DFDFFFE00BA719E /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		255D7C2C1DFDCCD200BA719E /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = chess/json.hpp; sourceTree = "<group>"; };
+		255D7C2D1DFDFFFE00BA719E /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = chess/Timer.cpp; sourceTree = "<group>"; };
+		255D7C2E1DFDFFFE00BA719E /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = chess/Timer.hpp; sourceTree = "<group>"; };
 		25730EFA1DFD12AC004D8830 /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Label.cpp; sourceTree = "<group>"; };
 		25730EFB1DFD12AC004D8830 /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Label.hpp; sourceTree = "<group>"; };
 		25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChessWindow.cpp; sourceTree = "<group>"; };
@@ -144,38 +144,14 @@
 		254F04591DE02CD1002AFD3C /* chess */ = {
 			isa = PBXGroup;
 			children = (
-				255D7C2C1DFDCCD200BA719E /* json.hpp */,
-				254F045C1DE02CD1002AFD3C /* ResourcePath.mm */,
-				254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */,
-				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
-				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
-				255D7C2E1DFDFFFE00BA719E /* Timer.hpp */,
-				255D7C2D1DFDFFFE00BA719E /* Timer.cpp */,
+				255D7C321DFE2CC700BA719E /* Model */,
+				255D7C301DFE2C6B00BA719E /* Helper */,
+				255D7C311DFE2C9F00BA719E /* Windows */,
+				254F045F1DE02CD1002AFD3C /* main.cpp */,
 				25EEA15B1DFC83C3003C3D1D /* ChessServerAPI.hpp */,
 				25EEA15A1DFC83C3003C3D1D /* ChessServerAPI.cpp */,
-				25AF9E3C1DF1D21300712BA9 /* ChessWindow.hpp */,
-				25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */,
-				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
-				255751C31DE4A0F800FC162E /* Clickable.cpp */,
-				25730EFB1DFD12AC004D8830 /* Label.hpp */,
-				25730EFA1DFD12AC004D8830 /* Label.cpp */,
-				255751C61DE4D6D200FC162E /* Button.hpp */,
-				255751C51DE4D6D200FC162E /* Button.cpp */,
-				254F045F1DE02CD1002AFD3C /* main.cpp */,
-				DD744F561DFC808E0087889D /* MainWindow.hpp */,
-				DD744F551DFC808E0087889D /* MainWindow.cpp */,
-				DD744F591DFCA8F20087889D /* MultiplayerWindow.hpp */,
-				DD744F581DFCA8F20087889D /* MultiplayerWindow.cpp */,
-				25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */,
-				25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */,
 				254F04701DE030E4002AFD3C /* ChessBoard.hpp */,
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
-				254F049E1DE20F06002AFD3C /* Player.hpp */,
-				254F049D1DE20F06002AFD3C /* Player.cpp */,
-				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
-				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
-				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
-				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
 				254F047E1DE0CF25002AFD3C /* Pieces */,
 				254F04611DE02CD1002AFD3C /* Resources */,
 				254F045A1DE02CD1002AFD3C /* Supporting Files */,
@@ -229,6 +205,55 @@
 				254F04AF1DE341B4002AFD3C /* King.cpp */,
 			);
 			name = Pieces;
+			sourceTree = "<group>";
+		};
+		255D7C301DFE2C6B00BA719E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				254F04A41DE2495C002AFD3C /* Clickable.hpp */,
+				255751C31DE4A0F800FC162E /* Clickable.cpp */,
+				255D7C2C1DFDCCD200BA719E /* json.hpp */,
+				254F045C1DE02CD1002AFD3C /* ResourcePath.mm */,
+				254F045E1DE02CD1002AFD3C /* ResourcePath.hpp */,
+				254F04A11DE22321002AFD3C /* Coordinate.hpp */,
+				254F04A01DE22321002AFD3C /* Coordinate.cpp */,
+				255D7C2E1DFDFFFE00BA719E /* Timer.hpp */,
+				255D7C2D1DFDFFFE00BA719E /* Timer.cpp */,
+			);
+			name = Helper;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		255D7C311DFE2C9F00BA719E /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				DD744F561DFC808E0087889D /* MainWindow.hpp */,
+				DD744F551DFC808E0087889D /* MainWindow.cpp */,
+				DD744F591DFCA8F20087889D /* MultiplayerWindow.hpp */,
+				DD744F581DFCA8F20087889D /* MultiplayerWindow.cpp */,
+				25AF9E3F1DF1F78C00712BA9 /* ChessGame.hpp */,
+				25AF9E3E1DF1F78C00712BA9 /* ChessGame.cpp */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		255D7C321DFE2CC700BA719E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25AF9E3C1DF1D21300712BA9 /* ChessWindow.hpp */,
+				25AF9E3B1DF1D21300712BA9 /* ChessWindow.cpp */,
+				25730EFB1DFD12AC004D8830 /* Label.hpp */,
+				25730EFA1DFD12AC004D8830 /* Label.cpp */,
+				255751C61DE4D6D200FC162E /* Button.hpp */,
+				255751C51DE4D6D200FC162E /* Button.cpp */,
+				254F049E1DE20F06002AFD3C /* Player.hpp */,
+				254F049D1DE20F06002AFD3C /* Player.cpp */,
+				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
+				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
+				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
+				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		25EEA1531DFBC2D8003C3D1D /* Frameworks */ = {

@@ -19,9 +19,6 @@ public:
     MultiplayerWindow();
     
 private:
-    Button* joinButton;
-    Button* hostButton;
-    Button* backButton;
     virtual void resizeEvent(Event event) override;
     
     

@@ -80,8 +80,8 @@ void ChessServerAPI::getLastMove(ChessBoard* board, function<void(Coordinate fro
     }
 }
 
-void ChessServerAPI::getAvalibleServers(function<void(vector<string> servers)> success) {
-    RestClient::Response response = RestClient::get(url + "avalibleServers");
+void ChessServerAPI::getAvailableServers(function<void(vector<string> servers)> success) {
+    RestClient::Response response = RestClient::get(url + "availableServers");
     if (response.code == 200) {
         json responseObj = json::parse(response.body);
         success(responseObj["servers"]);

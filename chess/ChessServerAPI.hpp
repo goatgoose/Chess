@@ -28,7 +28,7 @@ public:
     static void movePiece(ChessBoard* board, Coordinate from, Coordinate to, function<void()> success);
     static void getLastTurn(ChessBoard* board, function<void(string lastTurn)> success);
     static void getLastMove(ChessBoard* board, function<void(Coordinate from, Coordinate to)> success);
-    static void getAvalibleServers(function<void(vector<string> servers)> success);
+    static void getAvailableServers(function<void(vector<string> servers)> success);
 };
 
 #endif /* ChessServerAPI_hpp */

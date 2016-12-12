@@ -10,23 +10,19 @@
 
 MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81), false) {
     
-    ChessServerAPI::getAvalibleServers([&] (vector<string> avalibleServers) {
-        for (int i = 0; i < avalibleServers.size(); i++) {
-            string server = avalibleServers[i];
-            cout << server << endl;
+    ChessServerAPI::getAvailableServers([&] (vector<string> servers) {
+        for (int i = 0; i < servers.size(); i++) {
+            string server = servers[i];
+            
+            Button* serverButton = new Button(0.1, 0.05, 0.8, 0.1, this, [&] {
+                this->renderWindow->close();
+                ChessGame* chessGame = new ChessGame(720, server, MULTI_PLAYER);
+                chessGame->launch();
+            });
         }
     });
     
-    joinButton = new Button(0.25, 0.4, 0.5, 0.15, this, [&] {
-        this->renderWindow->close();
-        ChessGame* chessGame = new ChessGame(720, "test game", MULTI_PLAYER);
-        chessGame->launch();
-        
-    });
-    joinButton->setColor(Color(96, 108, 131));
-    joinButton->setLabel("Join Game");
-    
-    hostButton = new Button(0.15, 0.8, 0.2, 0.10, this, [&] {
+    Button* hostButton = new Button(0.15, 0.8, 0.2, 0.10, this, [&] {
         this->renderWindow->close();
         ChessGame* chessGame = new ChessGame(720, "test game", MULTI_PLAYER);
         chessGame->launch();
@@ -34,7 +30,7 @@ MultiplayerWindow::MultiplayerWindow(): ChessWindow(800, 800, Color(232, 174, 81
     hostButton->setColor(Color(96, 108, 131));
     hostButton->setLabel("Host Game");
     
-    backButton = new Button(0.65, 0.8, 0.2, 0.10, this, [&] {
+    Button* backButton = new Button(0.65, 0.8, 0.2, 0.10, this, [&] {
         this->renderWindow->close();
         MainWindow* mainWindow = new MainWindow();
         mainWindow->launch();
