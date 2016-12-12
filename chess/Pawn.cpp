@@ -25,8 +25,9 @@ vector<Tile*> Pawn::getLegalMoves() {
     if (board->getTile(Coordinate(x, y + (1 * teamDirection)))->piece == nullptr) {
         moves.push_back(Coordinate(x, y + (1 * teamDirection)));
         
-        if (!hasMoved) {
-            moves.push_back(Coordinate(x, y + (2 * teamDirection)));
+        Coordinate twoAhead(x, y + (2 * teamDirection));
+        if (!hasMoved && player->board->getTile(twoAhead)->piece == nullptr) {
+            moves.push_back(twoAhead);
         }
     }
     
