@@ -152,6 +152,8 @@
 				254F046F1DE030E4002AFD3C /* ChessBoard.cpp */,
 				254F04761DE0B4CF002AFD3C /* Tile.hpp */,
 				254F04751DE0B4CF002AFD3C /* Tile.cpp */,
+				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
+				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
 				254F047E1DE0CF25002AFD3C /* Pieces */,
 				254F04611DE02CD1002AFD3C /* Resources */,
 				254F045A1DE02CD1002AFD3C /* Supporting Files */,
@@ -250,8 +252,6 @@
 				255751C51DE4D6D200FC162E /* Button.cpp */,
 				254F049E1DE20F06002AFD3C /* Player.hpp */,
 				254F049D1DE20F06002AFD3C /* Player.cpp */,
-				254F047C1DE0CD3E002AFD3C /* Piece.hpp */,
-				254F047B1DE0CD3E002AFD3C /* Piece.cpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";

@@ -29,12 +29,14 @@ public:
     
     ~ChessGame();
 private:
-    string name;
     int scale;
+    string name;
+    GameMode gameMode;
     
     ChessBoard* board;
     
     virtual void resizeEvent(Event event) override;
+    virtual void closeEvent(Event event) override;
     
     void update();
     

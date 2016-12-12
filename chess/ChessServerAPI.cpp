@@ -27,7 +27,7 @@ void ChessServerAPI::createGame(ChessBoard* board, function<void(bool exists)> s
         }
     } else {
         cout << "failed creating game: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             createGame(board, success);
         }));
     }
@@ -42,7 +42,7 @@ void ChessServerAPI::deleteGame(ChessBoard* board, function<void()> success) {
         success();
     } else {
         cout << "failed deleting game: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             deleteGame(board, success);
         }));
     }
@@ -58,7 +58,7 @@ void ChessServerAPI::isWaiting(ChessBoard* board, function<void(bool isWaiting)>
         success(responseObj["isWaiting"]);
     } else {
         cout << "failed getting waiting status: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             isWaiting(board, success);
         }));
     }
@@ -82,7 +82,7 @@ void ChessServerAPI::movePiece(ChessBoard* board, Coordinate from, Coordinate to
         success();
     } else {
         cout << "failed updating piece location: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             movePiece(board, from, to, success);
         }));
     }
@@ -98,7 +98,7 @@ void ChessServerAPI::getLastTurn(ChessBoard* board, function<void(string lastTur
         success(responseObj["turn"]);
     } else {
         cout << "failed getting last turn: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             getLastTurn(board, success);
         }));
     }
@@ -116,7 +116,7 @@ void ChessServerAPI::getLastMove(ChessBoard* board, function<void(Coordinate fro
         success(from, to);
     } else {
         cout << "failed getting last move: will try again in " << timeout << " seconds" << endl;
-        board->game->addTimer(new Timer(timeout, [&] {
+        board->game->addTimer(new Timer(timeout, [=] {
             getLastMove(board, success);
         }));
     }
@@ -129,7 +129,7 @@ void ChessServerAPI::getAvailableServers(ChessWindow* window, function<void(vect
         success(responseObj["servers"]);
     } else {
         cout << "failed getting available servers: will try again in " << timeout << " seconds" << endl;
-        window->addTimer(new Timer(timeout, [&] {
+        window->addTimer(new Timer(timeout, [=] {
             getAvailableServers(window, success);
         }));
     }

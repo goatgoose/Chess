@@ -23,7 +23,7 @@ using namespace std;
 
 class Piece {
 public:
-    ~Piece();
+    virtual ~Piece();
     
     virtual void moveTo(Tile* tile);
     void update();

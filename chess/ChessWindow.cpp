@@ -42,6 +42,7 @@ void ChessWindow::launch() {
         while (renderWindow->pollEvent(event)) {
             
             if (event.type == Event::Closed) {
+                closeEvent(event);
                 renderWindow->close();
                 
             } else if (event.type == Event::Resized) {
@@ -142,4 +143,13 @@ void ChessWindow::addTimer(Timer* timer) {
 
 void ChessWindow::resizeEvent(Event event) {
 
+}
+
+void ChessWindow::closeEvent(Event event) {
+    
+}
+
+ChessWindow::~ChessWindow() {
+    delete background;
+    renderWindow->close();
 }

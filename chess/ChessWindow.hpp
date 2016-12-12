@@ -21,6 +21,7 @@ using namespace std;
 class ChessWindow {
 public:
     ChessWindow(int x, int y, Color backgroundColor, bool isResizable);
+    virtual ~ChessWindow();
     
     void launch();
     
@@ -47,6 +48,7 @@ private:
     Clickable* lastHovered;
     
     virtual void resizeEvent(Event event);
+    virtual void closeEvent(Event even);
 };
 
 #endif /* ChessWindow_hpp */

@@ -37,6 +37,10 @@ void Piece::update() {
 }
 
 void Piece::moveTo(Tile* tile) {
+    if (tile->piece != nullptr) {
+        delete tile->piece;
+    }
+    
     board->tiles[this->x][this->y]->piece = nullptr;
     this->x = tile->getX();
     this->y = tile->getY();
@@ -84,6 +88,8 @@ Side Piece::getSide() {
 }
 
 Piece::~Piece() {
+    player->board->game->removeDrawable(sprite);
+    
     delete texture;
     delete sprite;
 }
