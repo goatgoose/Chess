@@ -20,3 +20,7 @@ int Coordinate::getX() {
 int Coordinate::getY() {
     return this->y;
 }
+
+bool Coordinate::operator==(const Coordinate &other) {
+    return (this->x == other.x && this->y == other.y);
+}

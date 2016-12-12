@@ -15,6 +15,8 @@ public:
     int getX();
     int getY();
     
+    bool operator==(const Coordinate &other);
+    
 private:
     int x;
     int y;

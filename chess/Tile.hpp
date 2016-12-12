@@ -14,6 +14,7 @@
 #include <iostream>
 #include <Player.hpp>
 #include <Clickable.hpp>
+#include <Coordinate.hpp>
 
 using namespace std;
 using namespace sf;
@@ -39,6 +40,8 @@ public:
     Side getSide();
     
     virtual void releaseEvent() override;
+    
+    Coordinate getPosition();
     
     virtual int getX1() override;
     virtual int getY1() override;

@@ -152,3 +152,21 @@ Tile* ChessBoard::getTile(Coordinate coordinate) {
     }
     return tiles[coordinate.getX()][coordinate.getY()];
 }
+
+Piece* ChessBoard::getPiece(string name, Side side) {
+    for (int x = 0; x < 8; x++) {
+        for (int y = 0; y < 8; y++) {
+            Tile* tile = tiles[x][y];
+            if (tile->piece != nullptr) {
+                Piece* piece = tile->piece;
+                if (piece->textureName == name && piece->getSide() == side) {
+                    return piece;
+                }
+            }
+        }
+    }
+}
+
+
+
+

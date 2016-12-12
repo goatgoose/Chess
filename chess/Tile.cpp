@@ -58,7 +58,9 @@ void Tile::releaseEvent() {
             
             if (isALegalMove) {
                 board->game->pickedUpPiece->moveTo(this);
-    
+                
+                cout << "piece moved" << endl;
+                
                 if (board->gameMode == SINGLE_PLAYER) {
                     board->isMyTurn = true;
                     if (board->me == board->blackPlayer) {
@@ -107,6 +109,10 @@ void Tile::resetHighlight() {
     setColor();
 }
 
+Coordinate Tile::getPosition() {
+    return Coordinate(x, y);
+}
+
 int Tile::getX1() {
     
     return board->getOffset() * x;
@@ -134,7 +140,7 @@ int Tile::getY() {
 
 Side Tile::getSide() {
     return this->side;
-}
+    }
 
 Tile::~Tile() {
     delete this->rect;

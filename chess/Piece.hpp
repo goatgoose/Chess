@@ -36,6 +36,10 @@ public:
     
     Sprite* getSprite();
     Side getSide();
+    
+    string textureName;
+    
+    Coordinate getPosition();
 protected:
     Piece(int x, int y, Player* player, string textureName);
     

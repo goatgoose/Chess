@@ -50,7 +50,9 @@ public:
     
     void setScale(int scale);
     int getOffset();
+    
     Tile* getTile(Coordinate coordinate);
+    Piece* getPiece(string name, Side side);
     
     int scale;
 private:

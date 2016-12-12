@@ -14,6 +14,7 @@ Piece::Piece(int x, int y, Player* player, string textureName) {
     this->x = x;
     this->y = y;
     this->player = player;
+    this->textureName = textureName;
     
     this->board = player->board;
     this->side = player->getSide();
@@ -37,8 +38,13 @@ void Piece::update() {
 }
 
 void Piece::moveTo(Tile* tile) {
+    // capture enemy piece if it lands on it
     if (tile->piece != nullptr) {
         delete tile->piece;
+        if (tile->piece->textureName == "king") {
+            cout << "killed the king" << endl;
+            player->board->game->notificationLabel->text->setString(sf::String(player->getSideString() + " wins!"));
+        }
     }
     
     board->tiles[this->x][this->y]->piece = nullptr;
@@ -46,28 +52,24 @@ void Piece::moveTo(Tile* tile) {
     this->y = tile->getY();
     tile->piece = this;
     
-    // capture enemy piece if it lands on it
-    
     update();
 }
 
 bool Piece::moveIsPossible(Coordinate move) {
-    Tile* tile = board->getTile(move);
+    Tile* toTile = board->getTile(move);
     
     // check for out of bounds
-    if (tile == nullptr) {
+    if (toTile == nullptr) {
         return false;
     }
     
     // does a piece exist
-    if (tile->piece != nullptr) {
-        if (tile->piece->getSide() == this->side) {
+    if (toTile->piece != nullptr) {
+        if (toTile->piece->getSide() == this->side) {
             // if its on this team u cant move here
             return false;
         }
     }
-    
-    // check if king will die
     
     return true;
 }
@@ -85,6 +87,10 @@ Sprite* Piece::getSprite() {
 
 Side Piece::getSide() {
     return this->side;
+}
+
+Coordinate Piece::getPosition() {
+    return Coordinate(x, y);
 }
 
 Piece::~Piece() {

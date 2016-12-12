@@ -9,7 +9,6 @@
 #include "ChessGame.hpp"
 
 ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(scale + 300, scale, Color(232, 174, 81), true) {
-    cout << "game name: " << name << endl;
     this->scale = scale;
     this->name = name;
     this->gameMode = gameMode;
