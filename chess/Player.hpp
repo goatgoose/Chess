@@ -2,8 +2,7 @@
 //  Player.hpp
 //  chess
 //
-//  Created by Sam Clark on 11/20/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Craig Conway
 //
 
 #ifndef Player_hpp

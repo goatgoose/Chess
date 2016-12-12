@@ -2,10 +2,8 @@
 //  ChessGame.cpp
 //  chess
 //
-//  Created by Sam Clark on 12/2/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark and Craig Conway
 //
-
 #include "ChessGame.hpp"
 
 ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(scale + 300, scale, Color(232, 174, 81), true) {
@@ -31,7 +29,18 @@ ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(sca
         secedeButton->setColor(Color(96, 108, 131));
         secedeButton->setLabel("Surrender");
     }
-    
+    else
+    {
+        secedeButton = new Button(0.8, 0.6, 0.15, 0.075, this, [&] {
+            ChessServerAPI::deleteGame(board, [] {});
+            this->renderWindow->close();
+            MainWindow* mainWindow = new MainWindow();
+            mainWindow->launch();
+        });
+        secedeButton->setColor(Color(96, 108, 131));
+        secedeButton->setLabel("Back");
+    }
+        
     this->board->setScale(scale);
     
     update();

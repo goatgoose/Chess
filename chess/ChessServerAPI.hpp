@@ -2,8 +2,7 @@
 //  ChessServerAPI.hpp
 //  chess
 //
-//  Created by Sam Clark on 12/10/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark
 //
 
 #ifndef ChessServerAPI_hpp

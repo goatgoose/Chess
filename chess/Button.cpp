@@ -2,8 +2,7 @@
 //  Button.cpp
 //  chess
 //
-//  Created by Sam Clark on 11/22/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark 
 //
 
 #include "Button.hpp"
@@ -53,19 +52,19 @@ void Button::setColor(Color color) {
 }
 
 void Button::pressEvent() {
-    cout << "press" << endl;
+     rect->setFillColor(Color(color.r-20, color.g-20, color.b-20));
 }
 
 void Button::releaseEvent() {
     clickAction();
 }
 
-void Button::hoverEvent() {
-    cout << "hover" << endl;
+void Button::hoverEvent(){
+    rect->setFillColor(Color(color.r+20, color.g+20, color.b+20));
 }
 
 void Button::unhoverEvent() {
-    cout << "unhover" << endl;
+    rect->setFillColor(color);
 }
 
 int Button::getX1() {

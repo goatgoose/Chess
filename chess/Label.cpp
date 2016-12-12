@@ -2,8 +2,7 @@
 //  Label.cpp
 //  chess
 //
-//  Created by Sam Clark on 12/10/16.
-//  Copyright © 2016 Sam Clark. All rights reserved.
+//  Created by Sam Clark and Craig Conway
 //
 
 #include "Label.hpp"
