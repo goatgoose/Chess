@@ -19,10 +19,10 @@ ChessGame::ChessGame(int scale, string name, GameMode gameMode): ChessWindow(sca
     drawButton->setLabel("Ask For Draw");
     
     secedeButton = new Button(0.8, 0.6, 0.15, 0.075, this, [&] {
+        ChessServerAPI::deleteGame(board, [] {});
         this->renderWindow->close();
         MainWindow* mainWindow = new MainWindow();
         mainWindow->launch();
-        delete this;
     });
     secedeButton->setColor(Color(96, 108, 131));
     secedeButton->setLabel("Surrender");

@@ -27,6 +27,7 @@ void ChessServerAPI::createGame(ChessBoard* board, function<void(bool exists)> s
 }
 
 void ChessServerAPI::deleteGame(ChessBoard* board, function<void()> success) {
+    cout << "delete" << endl;
     json request;
     request["game"] = board->game->getName();
     
