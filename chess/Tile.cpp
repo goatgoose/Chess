@@ -58,8 +58,6 @@ void Tile::releaseEvent() {
             if (isALegalMove) {
                 board->game->pickedUpPiece->moveTo(this);
                 
-                cout << "piece moved" << endl;
-                
                 if (board->gameMode == SINGLE_PLAYER) {
                     board->isMyTurn = true;
                     if (board->me == board->blackPlayer) {
