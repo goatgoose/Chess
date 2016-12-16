@@ -10,7 +10,7 @@
 #include "ChessBoard.hpp"
 #include "ChessWindow.hpp"
 
-string url = "http://localhost:4567/";
+string url = "http://ec2-54-90-235-42.compute-1.amazonaws.com:4567/";
 int timeout = 5; // seconds
 
 void ChessServerAPI::createGame(ChessBoard* board, function<void(bool exists)> success) {
